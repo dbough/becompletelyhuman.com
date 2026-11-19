@@ -64,6 +64,12 @@
   position: relative;
 }
 
+.soon__logo {
+  width: clamp(96px, 18vw, 144px);
+  height: auto;
+  margin: 0 auto 1.75rem;
+}
+
 .soon__title {
   margin-bottom: 0.25em;
   font-size: clamp(2.75rem, 10vw, 6rem);
