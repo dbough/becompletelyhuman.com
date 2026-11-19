@@ -1,0 +1,131 @@
+// Draft-only accent picker. Delete this file with the switcher.
+
+.switcher {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.switcher__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  background: var(--surface-2);
+  color: var(--heading);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.switcher__toggle:hover {
+  border-color: var(--accent);
+}
+
+.switcher__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.switcher__panel {
+  order: -1; // panel sits above the button
+  width: 230px;
+  padding: 1rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.switcher__panel[hidden] {
+  display: none;
+}
+
+.switcher fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.switcher legend {
+  margin-bottom: 0.5rem;
+  color: var(--heading);
+  font-weight: 700;
+}
+
+.swatch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.swatch:hover {
+  background: var(--surface);
+  color: var(--heading);
+}
+
+.swatch input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.swatch__dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px var(--surface-2);
+}
+
+.swatch input:checked + .swatch__dot {
+  box-shadow: 0 0 0 2px var(--surface-2), 0 0 0 4px var(--heading);
+}
+
+.swatch input:checked ~ .swatch__name {
+  color: var(--heading);
+  font-weight: 700;
+}
+
+.swatch input:focus-visible + .swatch__dot {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.switcher__reset {
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  background: none;
+  border: 0;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.switcher__note {
+  margin: 0.5rem 0 0;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}

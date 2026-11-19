@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------
+# Accent palettes. One file controls both the default accent and
+# the options in the theme switcher.
+#
+#   id         Used in _config.yml (accent: ember)
+#   name       Label in the switcher
+#   accent     The accent color (eyebrows, buttons, outlines, focus rings)
+#   accent_hi  A slightly lighter version for hover states
+#   on_accent  Text color on top of the accent (buttons)
+#
+# All five pass WCAG AAA (7:1) or close to it against the dark
+# background. Test new colors before adding them: webaim.org/resources/contrastchecker
+# ---------------------------------------------------------------
+
+- id: ember
+  name: Ember
+  accent: "#ff7a3d"
+  accent_hi: "#ff9563"
+  on_accent: "#141210"
+
+- id: marigold
+  name: Marigold
+  accent: "#ffbf3c"
+  accent_hi: "#ffcd66"
+  on_accent: "#141210"
+
+- id: coral
+  name: Coral
+  accent: "#ff6f61"
+  accent_hi: "#ff8c81"
+  on_accent: "#141210"
+
+- id: seaglass
+  name: Sea glass
+  accent: "#3fd8c0"
+  accent_hi: "#6ae2cf"
+  on_accent: "#141210"
+
+- id: electric
+  name: Electric blue
+  accent: "#5aa9ff"
+  accent_hi: "#80bdff"
+  on_accent: "#141210"

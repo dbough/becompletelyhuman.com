@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------
+# Category cards on the homepage, shown in this order.
+#
+# Fields:
+#   name         Card title
+#   icon         An emoji (shown decoratively, hidden from screen readers)
+#   description  One to three short sentences
+#   link         Optional. Full URL to another site. Leave blank and the
+#                card points to the contact section instead.
+#   link_label   Optional. Button text when there's a link.
+#
+# To add a category, copy a block, paste it where you want it, edit.
+# Keep stealth projects out of here. Describe the category, not the project.
+# ---------------------------------------------------------------
+
+- name: Coaching
+  icon: "🧭"
+  description: >-
+    For people in the middle of something: a career change, a new
+    leadership role, burnout, or a season that just feels stuck.
+    Honest conversations and practical next steps.
+  link: https://completelyhumancoaching.com
+  link_label: Visit Completely Human Coaching
+
+- name: IT consulting
+  icon: "🛠️"
+  description: >-
+    Twenty-plus years of engineering and engineering leadership,
+    pointed at your problem. Integrations, APIs, systems that don't
+    talk to each other, and teams that need a steadier hand.
+    Plain answers, no upsell.
+  link: https://getsimplyproductive.com
+  link_label: Visit Simply Productive
+
+- name: Software
+  icon: "💻"
+  description: >-
+    Small tools that fix real annoyances. Some are out in the world,
+    some are still experiments. Built, tested, broken, and rebuilt.
+  link:
+  link_label:
+
+- name: Content creation
+  icon: "🎥"
+  description: >-
+    Video and short-form content about work, change, and being a
+    person. Made for YouTube and Instagram, mistakes left in.
+  link:
+  link_label:
+
+- name: Writing
+  icon: "✍️"
+  description: >-
+    Essays on work, leadership, imposter syndrome, and the messy
+    parts most people leave out.
+  # Option: link the Substack here if you want it public on this site.
+  # link: https://danbough.substack.com
+  # link_label: Read on Substack
+  link:
+  link_label:

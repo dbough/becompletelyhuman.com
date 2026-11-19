@@ -1,0 +1,33 @@
+// ---------------------------------------------------------------
+// Design tokens. Everything color-related lives in CSS variables
+// so it can be swapped live. The accent variables (--accent,
+// --accent-hi, --on-accent) come from _data/palettes.yml via
+// _includes/theme-vars.html, which loads after this stylesheet.
+// ---------------------------------------------------------------
+
+:root {
+  // Surfaces: warm near-black, not blue-black.
+  --bg: #121110;
+  --surface: #1c1a18;
+  --surface-2: #242120;
+  --border: #2e2a27;
+
+  // Text
+  --heading: #ffffff;
+  --text: #b8b1a9;   // 8.9:1 on --bg
+  --text-dim: #8f8880; // 5.4:1 on --bg, small print only
+
+  // Derived accent tints (color-mix follows the live accent)
+  --accent-tint: color-mix(in srgb, var(--accent) 14%, transparent);
+  --accent-glow: color-mix(in srgb, var(--accent) 22%, transparent);
+
+  // Type
+  --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  // Shape and spacing
+  --radius: 16px;
+  --radius-sm: 10px;
+  --container: 1120px;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+  --section-space: clamp(4rem, 10vw, 7rem);
+}

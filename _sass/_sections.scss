@@ -1,0 +1,154 @@
+// Hero
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(5rem, 14vw, 9rem) clamp(4rem, 10vw, 7rem);
+  text-align: center;
+}
+
+// A soft glow in the live accent, so the page feels lit, not cold.
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -30% -10% auto;
+  height: 120%;
+  background: radial-gradient(closest-side, var(--accent-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+}
+
+.hero__title {
+  max-width: 15ch;
+  margin-inline: auto;
+  font-size: clamp(2.5rem, 7vw, 4.75rem);
+  letter-spacing: -0.035em;
+}
+
+.hero__lede {
+  max-width: 640px;
+  margin: 0 auto 2.25rem;
+  font-size: clamp(1.075rem, 2vw, 1.25rem);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.875rem;
+}
+
+// Coming-soon page: one centered screen with the same glow as the hero.
+.soon {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 90px); // leaves room for the footer
+  min-height: calc(100svh - 90px);
+  padding-block: 4rem;
+  text-align: center;
+}
+
+.soon::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10%;
+  background: radial-gradient(closest-side, var(--accent-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.soon__inner {
+  position: relative;
+}
+
+.soon__title {
+  margin-bottom: 0.25em;
+  font-size: clamp(2.75rem, 10vw, 6rem);
+  letter-spacing: -0.04em;
+}
+
+.soon__title span {
+  color: var(--accent);
+}
+
+.soon__message {
+  margin: 0 0 2.5rem;
+  color: var(--text);
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-weight: 500;
+}
+
+.soon .btn--large {
+  overflow-wrap: normal;
+}
+
+@media (max-width: 380px) {
+  .soon .btn--large {
+    font-size: 0.95rem;
+    padding-inline: 1.1rem;
+  }
+}
+
+// Why
+.why {
+  display: grid;
+  gap: 2rem 4rem;
+}
+
+@media (min-width: 860px) {
+  .why {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+  }
+
+  .why__header {
+    position: sticky;
+    top: 110px;
+  }
+}
+
+.why__body {
+  max-width: 640px;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--accent);
+  font-size: 1.125rem;
+}
+
+.why__sign {
+  margin: 1.75rem 0 0;
+  color: var(--heading);
+  font-weight: 700;
+}
+
+// Contact
+.contact {
+  max-width: 720px;
+  margin-inline: auto;
+  padding: clamp(2rem, 6vw, 3.5rem);
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 8px);
+  background-image: radial-gradient(circle at 50% 0%, var(--accent-tint), transparent 65%);
+}
+
+.contact p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.contact .contact__address {
+  margin: 1.25rem auto 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.contact__address span {
+  color: var(--heading);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  user-select: all;
+}

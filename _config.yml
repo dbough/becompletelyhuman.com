@@ -1,0 +1,68 @@
+# ---------------------------------------------------------------
+# Completely Human LLC: site settings
+# Restart `bundle exec jekyll serve` after editing this file.
+# ---------------------------------------------------------------
+
+title: Completely Human
+legal_name: Completely Human LLC
+description: >-
+  Completely Human is a small company doing a handful of things:
+  coaching, IT consulting, software, content, and writing.
+location: Lakeland, Florida
+
+url: "https://becompletelyhuman.com"
+baseurl: ""
+
+# Main domain is becompletelyhuman.com. completelyhuman.llc forwards
+# to it at the registrar (see README).
+
+# Contact address. It feeds the contact button and the footer.
+email: hello@becompletelyhuman.com
+
+# ---------------------------------------------------------------
+# Coming-soon page. While enabled is true, the homepage shows this
+# simple page instead of the full site. Set to false to launch.
+# ---------------------------------------------------------------
+coming_soon:
+  enabled: true
+  eyebrow: Coaching · Consulting · Software · Content
+  message: Coming soon
+
+# ---------------------------------------------------------------
+# Hero headline (full site). Pick one by number (1, 2, or 3).
+# ---------------------------------------------------------------
+hero:
+  pick: 1
+  eyebrow: Coaching · Consulting · Software · Content · Writing
+  headlines:
+    - "Real work from someone who's still figuring it out."
+    - "Say the thing. Try the thing. Learn from the mess."
+    - "Imposter syndrome is loud. We do the work anyway."
+
+# ---------------------------------------------------------------
+# Colors
+# accent: the palette everyone sees by default (an id from
+#         _data/palettes.yml).
+# theme_switcher: true shows the palette picker in the corner.
+#         Set to false once you've chosen, and set accent above.
+# ---------------------------------------------------------------
+accent: ember
+theme_switcher: false
+
+# ---------------------------------------------------------------
+# Build settings
+# ---------------------------------------------------------------
+markdown: kramdown
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .ruby-version
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - node_modules

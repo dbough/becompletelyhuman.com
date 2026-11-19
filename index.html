@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{%- comment -%}
+  The homepage shows the coming-soon page while `coming_soon.enabled` is true
+  in _config.yml. Set it to false to launch the full site in _includes/home.html.
+{%- endcomment -%}
+{%- if site.coming_soon.enabled -%}
+  {% include coming-soon.html %}
+{%- else -%}
+  {% include home.html %}
+{%- endif -%}

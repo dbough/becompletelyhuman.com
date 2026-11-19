@@ -1,0 +1,57 @@
+# Build the Jekyll site and deploy it to GitHub Pages.
+# Based on GitHub's official Jekyll starter workflow (actions/starter-workflows/pages/jekyll.yml),
+# with action versions updated to the current majors as of November 2026.
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  # Lets you re-run a deploy by hand from the Actions tab.
+  workflow_dispatch:
+
+# Minimum permissions the Pages deploy needs.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time. Don't cancel a deploy that's already running.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          # No ruby-version here: setup-ruby reads it from .ruby-version.
+          bundler-cache: true # runs `bundle install` and caches gems
+
+      - name: Set up Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload the built site
+        uses: actions/upload-pages-artifact@v5 # uploads ./_site by default
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

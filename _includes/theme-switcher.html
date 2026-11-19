@@ -1,0 +1,27 @@
+{%- comment -%}
+  Draft-only palette picker. To remove it: set `theme_switcher: false`
+  in _config.yml. You can also delete this file, assets/js/theme-switcher.js,
+  and _sass/_switcher.scss (then remove its @use line in assets/css/main.scss).
+{%- endcomment -%}
+<div class="switcher" data-default="{{ site.accent }}">
+  <button class="switcher__toggle" type="button" aria-expanded="false" aria-controls="switcher-panel">
+    <span class="switcher__dot" aria-hidden="true"></span>
+    Accent color
+  </button>
+
+  <div class="switcher__panel" id="switcher-panel" hidden>
+    <fieldset>
+      <legend>Try an accent color</legend>
+      {%- for p in site.data.palettes %}
+      <label class="swatch">
+        <input type="radio" name="accent" value="{{ p.id }}">
+        <span class="swatch__dot" style="background: {{ p.accent }}" aria-hidden="true"></span>
+        <span class="swatch__name">{{ p.name }}</span>
+      </label>
+      {%- endfor %}
+    </fieldset>
+    <button class="switcher__reset" type="button">Reset to default</button>
+    <p class="switcher__note">Draft preview. Your choice is saved in this browser.</p>
+  </div>
+</div>
+<script src="{{ '/assets/js/theme-switcher.js' | relative_url }}" defer></script>

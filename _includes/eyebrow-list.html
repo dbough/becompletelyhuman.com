@@ -1,0 +1,11 @@
+{%- comment -%}
+  Renders "A · B · C" so lines only break between items, never before a dot.
+  Usage: {% include eyebrow-list.html text=site.coming_soon.eyebrow %}
+{%- endcomment -%}
+{%- assign parts = include.text | split: " · " -%}
+{%- capture items -%}
+{%- for part in parts -%}
+<span>{{ part }}{% unless forloop.last %} ·{% endunless %}</span>{% unless forloop.last %}&#32;{% endunless %}
+{%- endfor -%}
+{%- endcapture -%}
+<p class="eyebrow eyebrow--list">{{ items }}</p>

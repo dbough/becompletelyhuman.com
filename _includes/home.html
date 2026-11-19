@@ -1,0 +1,93 @@
+{%- assign headline_index = site.hero.pick | minus: 1 -%}
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__inner">
+    {% include eyebrow-list.html text=site.hero.eyebrow %}
+    <h1 id="hero-title" class="hero__title">{{ site.hero.headlines[headline_index] }}</h1>
+    <p class="hero__lede">
+      Completely Human is a small company doing a handful of things: coaching,
+      IT consulting, software, content, and writing. Different work, same approach.
+      Be honest. Show the messy middle. Treat failure as information. Say the
+      thing out loud. Don't let imposter syndrome make the decisions.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#what">See what we do</a>
+      <a class="btn btn--outline" href="#contact">Say hello</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="what" aria-labelledby="what-title">
+  <div class="container">
+    <header class="section__header">
+      <p class="eyebrow">What Completely Human does</p>
+      <h2 id="what-title">Pick the thing you came for.</h2>
+      <p>Some of these have their own home. Others are still taking shape. If something here sounds useful, ask.</p>
+    </header>
+
+    <ul class="card-grid" role="list">
+      {%- for item in site.data.categories %}
+      <li class="card">
+        <span class="card__icon" aria-hidden="true">{{ item.icon }}</span>
+        <h3 class="card__title">{{ item.name }}</h3>
+        <p class="card__text">{{ item.description }}</p>
+        {%- if item.link and item.link != "" %}
+        <a class="card__link" href="{{ item.link }}">
+          {{ item.link_label | default: "Learn more" }}<span class="card__arrow" aria-hidden="true">↗</span>
+        </a>
+        {%- else %}
+        <a class="card__link card__link--quiet" href="#contact">
+          Ask about {{ item.name | downcase }}<span class="card__arrow" aria-hidden="true">→</span>
+        </a>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--band" id="why" aria-labelledby="why-title">
+  <div class="container why">
+    <header class="why__header">
+      <p class="eyebrow">Why Completely Human</p>
+      <h2 id="why-title">Because pretending is exhausting.</h2>
+    </header>
+
+    <div class="why__body">
+      <p>
+        I wanted to be a comic book artist. Then I spent my twenties bouncing
+        between accounting, sociology, and zookeeping before I landed in tech,
+        where I stayed for more than twenty years building software and
+        leading engineering teams.
+      </p>
+      <p>
+        None of that was a straight line, and I've stopped pretending it was.
+        Completely Human is where I do the work I care about now, out in the
+        open: coaching, consulting, building things, making things, writing.
+        Some of it will work. Some of it won't. I'll learn from both, and I'll
+        probably tell you about it.
+      </p>
+      <p>
+        I still get imposter syndrome. Most people I know do too. They just
+        don't say it. I'd rather say it and then do the work anyway. That's
+        the whole idea.
+      </p>
+      <p class="why__sign">Dan Bough, founder</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Say hello.</h2>
+      <p>
+        Need help with something, want to work together, or just curious what
+        I'm up to? Email is the best way to reach me. I read every message.
+      </p>
+      <a class="btn btn--primary btn--large" href="mailto:{{ site.email }}">Send an email</a>
+      <p class="contact__address">or copy it: <span>{{ site.email }}</span></p>
+    </div>
+  </div>
+</section>

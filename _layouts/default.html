@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"{% if site.theme_switcher %} data-accent="{{ site.accent }}"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include head.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% unless site.coming_soon.enabled %}{% include header.html %}{% endunless %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  {% if site.theme_switcher %}{% include theme-switcher.html %}{% endif %}
+</body>
+</html>

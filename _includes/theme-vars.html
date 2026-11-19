@@ -1,0 +1,19 @@
+{%- comment -%}
+  Turns _data/palettes.yml into CSS variables.
+  The default comes from `accent` in _config.yml.
+  Palette overrides are only written when the switcher is on.
+{%- endcomment -%}
+{%- assign default = site.data.palettes | where: "id", site.accent | first -%}
+{%- unless default -%}{%- assign default = site.data.palettes | first -%}{%- endunless -%}
+<style>
+  :root {
+    --accent: {{ default.accent }};
+    --accent-hi: {{ default.accent_hi }};
+    --on-accent: {{ default.on_accent }};
+  }
+{%- if site.theme_switcher %}
+{%- for p in site.data.palettes %}
+  [data-accent="{{ p.id }}"] { --accent: {{ p.accent }}; --accent-hi: {{ p.accent_hi }}; --on-accent: {{ p.on_accent }}; }
+{%- endfor %}
+{%- endif %}
+</style>
