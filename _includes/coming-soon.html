@@ -2,7 +2,10 @@
   <div class="container soon__inner">
     <img class="soon__logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="Completely Human logo" width="144" height="144">
     {% include eyebrow-list.html text=site.coming_soon.eyebrow %}
-    <h1 id="soon-title" class="soon__title">Completely <span>Human</span></h1>
+    <h1 id="soon-title" class="soon__title">
+      <span class="visually-hidden">Completely Human</span>
+      <span aria-hidden="true"><span class="glyph glyph--c"></span>ompletely <span class="soon__accent"><span class="glyph glyph--h"></span>uman</span></span>
+    </h1>
     <p class="soon__message">{{ site.coming_soon.message }}</p>
     <a class="btn btn--primary btn--large" href="mailto:{{ site.email }}">{{ site.email }}</a>
   </div>

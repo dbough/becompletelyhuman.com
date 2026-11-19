@@ -85,8 +85,33 @@
   letter-spacing: -0.04em;
 }
 
-.soon__title span {
+.soon__accent {
   color: var(--accent);
+}
+
+// The C and H are cut from the logo artwork, so the title matches it.
+// They take the text color via a mask, so the accent still follows the theme.
+.glyph {
+  display: inline-block;
+  background: currentColor;
+  -webkit-mask: var(--glyph) no-repeat center / 100% 100%;
+  mask: var(--glyph) no-repeat center / 100% 100%;
+}
+
+.glyph--c {
+  --glyph: url("/assets/img/glyph-c.png");
+  height: 0.94em;
+  width: 0.8em;
+  margin-right: -0.06em;
+  vertical-align: -0.03em;
+}
+
+.glyph--h {
+  --glyph: url("/assets/img/glyph-h.png");
+  height: 1.11em;
+  width: 0.9em;
+  margin-right: -0.1em;
+  vertical-align: -0.15em;
 }
 
 .soon__message {
