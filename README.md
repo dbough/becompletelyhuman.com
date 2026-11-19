@@ -16,7 +16,7 @@ The homepage for Completely Human LLC. The site lives at **becompletelyhuman.com
 | Page copy (hero text, Why, Contact) | `index.html` |
 | Header / footer | `_includes/header.html`, `_includes/footer.html` |
 | Styles | `_sass/` (`_tokens.scss` holds the base colors) |
-| Placeholder logo | the `<svg>` in `_includes/header.html` and `assets/img/favicon.svg` |
+| Placeholder logo (full site header) | the `<svg>` in `_includes/header.html`. No favicon yet: add `<link rel="icon" href="...">` in `_includes/head.html` |
 
 Restart `jekyll serve` after editing `_config.yml`. Everything else reloads on save.
 
