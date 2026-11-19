@@ -46,9 +46,9 @@
   overflow: hidden;
   display: grid;
   place-items: center;
-  min-height: calc(100vh - 90px); // leaves room for the footer
-  min-height: calc(100svh - 90px);
-  padding-block: 4rem;
+  // Fills the space above the footer, so the page is exactly one screen.
+  flex: 1;
+  padding-block: 1.5rem;
   text-align: center;
 }
 
@@ -62,16 +62,25 @@
 
 .soon__inner {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // Vertical gaps scale with screen height so everything fits on short screens.
+  --gap: clamp(1rem, 4.5vh, 2.75rem);
 }
 
 .soon__logo {
-  width: clamp(96px, 18vw, 144px);
+  width: clamp(84px, 17vh, 144px);
   height: auto;
-  margin: 0 auto 1.75rem;
+  margin: 0 0 var(--gap);
+}
+
+.soon .eyebrow {
+  margin: 0 0 var(--gap);
 }
 
 .soon__title {
-  margin-bottom: 0.25em;
+  margin: 0 0 var(--gap);
   font-size: clamp(2.75rem, 10vw, 6rem);
   letter-spacing: -0.04em;
 }
@@ -81,7 +90,7 @@
 }
 
 .soon__message {
-  margin: 0 0 2.5rem;
+  margin: 0 0 calc(var(--gap) * 1.1);
   color: var(--text);
   font-size: clamp(1.25rem, 3vw, 1.6rem);
   font-weight: 500;
