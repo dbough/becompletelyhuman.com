@@ -6,12 +6,13 @@ noindex: true
 ---
 <section class="soon qr" aria-labelledby="qr-title">
   <div class="container soon__inner qr__inner">
+    <img class="qr__logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="" width="88" height="88">
     <h1 id="qr-title" class="qr__title">
       <span class="visually-hidden">Completely Human</span>
       <span aria-hidden="true"><span class="glyph glyph--c"></span>ompletely <span class="soon__accent"><span class="glyph glyph--h"></span>uman</span></span>
     </h1>
     <a class="qr__code" href="{{ '/' | absolute_url }}">
-      <img src="{{ '/assets/img/qr-logo.png' | relative_url }}" alt="QR code linking to {{ site.url | remove: 'https://' }}" width="1000" height="1000">
+      <img src="{{ '/assets/img/qr.svg' | relative_url }}" alt="QR code linking to {{ site.url | remove: 'https://' }}">
     </a>
     <p class="qr__url">{{ site.url | remove: 'https://' }}</p>
   </div>
