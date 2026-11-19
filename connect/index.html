@@ -6,10 +6,13 @@ noindex: true
 ---
 <section class="soon connect" aria-labelledby="connect-title">
   <div class="container soon__inner connect__inner">
-    <img class="soon__logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="Completely Human logo" width="144" height="144">
+    <img class="soon__logo connect__logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="Completely Human logo" width="144" height="144">
     {% include eyebrow-list.html text=site.coming_soon.eyebrow %}
-    <h1 id="connect-title" class="connect__name">Dan Bough</h1>
-    <p class="connect__org">Completely Human</p>
+    <h1 id="connect-title" class="soon__title connect__title">
+      <span class="visually-hidden">Completely Human</span>
+      <span aria-hidden="true"><span class="glyph glyph--c"></span>ompletely <span class="soon__accent"><span class="glyph glyph--h"></span>uman</span></span>
+    </h1>
+    <p class="connect__name">Dan Bough</p>
     <a class="btn btn--primary btn--large connect__save" href="{{ '/connect/dan-bough.vcf' | relative_url }}" download>Save my contact</a>
     <p class="connect__links">
       <a class="soon__email" href="tel:+13155596139">(315) 559-6139</a>

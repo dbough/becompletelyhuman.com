@@ -236,17 +236,25 @@
   letter-spacing: 0.02em;
 }
 
-// Temporary contact card page (/connect/): same look as the landing page.
-.connect__name {
-  margin: 0 0 0.25rem;
-  font-size: clamp(2.5rem, 9vw, 4.5rem);
-  letter-spacing: -0.04em;
+// Temporary contact card page (/connect/): same look as the landing page, with contact details.
+.connect__inner {
+  --gap: clamp(0.75rem, 3.4vh, 2.25rem);
 }
 
-.connect__org {
-  margin: 0 0 calc(var(--gap) * 1.4);
-  color: var(--text);
-  font-size: 1.25rem;
+.connect__logo {
+  width: clamp(64px, 12vh, 120px);
+}
+
+.connect__title {
+  margin-bottom: calc(var(--gap) * 0.9);
+  font-size: clamp(2.5rem, 9vw, 4.75rem);
+}
+
+.connect__name {
+  margin: 0 0 calc(var(--gap) * 1.2);
+  color: var(--heading);
+  font-size: 1.35rem;
+  font-weight: 600;
 }
 
 .connect__save {

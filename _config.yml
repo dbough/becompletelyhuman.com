@@ -1,6 +1,6 @@
-# Temporary "Save my contact" link on the landing page, pointing to /connect/.
+# Optional "Save my contact" link on the landing page, pointing to /connect/. Off so the page stays hard to find.
 # Set to false to hide it (the /connect/ page itself stays until you delete the connect/ folder).
-connect_link: true
+connect_link: false
 
 # ---------------------------------------------------------------
 # Completely Human LLC: site settings
