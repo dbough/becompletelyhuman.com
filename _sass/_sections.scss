@@ -114,20 +114,20 @@
   vertical-align: -0.15em;
 }
 
-.soon .btn--large {
-  overflow-wrap: normal;
-  color: #ffffff;
+// The email is a quiet text link, not a button.
+.soon__email {
+  color: var(--text-dim);
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  text-underline-offset: 0.3em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
-.soon .btn--large:hover {
-  color: #ffffff;
-}
-
-@media (max-width: 380px) {
-  .soon .btn--large {
-    font-size: 0.95rem;
-    padding-inline: 1.1rem;
-  }
+.soon__email:hover,
+.soon__email:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
 }
 
 // Why
