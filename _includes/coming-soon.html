@@ -7,5 +7,6 @@
       <span aria-hidden="true"><span class="glyph glyph--c"></span>ompletely <span class="soon__accent"><span class="glyph glyph--h"></span>uman</span></span>
     </h1>
     <a class="soon__email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    {% if site.connect_link %}<a class="soon__email soon__email--second" href="{{ '/connect/' | relative_url }}">Save my contact</a>{% endif %}
   </div>
 </section>

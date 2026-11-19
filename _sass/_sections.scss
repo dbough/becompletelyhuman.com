@@ -235,3 +235,37 @@
   font-weight: 600;
   letter-spacing: 0.02em;
 }
+
+// Temporary contact card page (/connect/): same look as the landing page.
+.connect__name {
+  margin: 0 0 0.25rem;
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
+  letter-spacing: -0.04em;
+}
+
+.connect__org {
+  margin: 0 0 calc(var(--gap) * 1.4);
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+.connect__save {
+  margin-bottom: calc(var(--gap) * 1.2);
+  color: #ffffff;
+}
+
+.connect__save:hover {
+  color: #ffffff;
+}
+
+.connect__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.soon .soon__email--second {
+  margin-top: 0.6rem;
+}

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Dan Bough
+permalink: /connect/
+noindex: true
+---
+<section class="soon connect" aria-labelledby="connect-title">
+  <div class="container soon__inner connect__inner">
+    <img class="soon__logo" src="{{ '/assets/img/logo.png' | relative_url }}" alt="Completely Human logo" width="144" height="144">
+    {% include eyebrow-list.html text=site.coming_soon.eyebrow %}
+    <h1 id="connect-title" class="connect__name">Dan Bough</h1>
+    <p class="connect__org">Completely Human</p>
+    <a class="btn btn--primary btn--large connect__save" href="{{ '/connect/dan-bough.vcf' | relative_url }}" download>Save my contact</a>
+    <p class="connect__links">
+      <a class="soon__email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a class="soon__email" href="{{ '/' | relative_url }}">{{ site.url | remove: 'https://' }}</a>
+    </p>
+  </div>
+</section>

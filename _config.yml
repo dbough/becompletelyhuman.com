@@ -1,3 +1,7 @@
+# Temporary "Save my contact" link on the landing page, pointing to /connect/.
+# Set to false to hide it (the /connect/ page itself stays until you delete the connect/ folder).
+connect_link: true
+
 # ---------------------------------------------------------------
 # Completely Human LLC: site settings
 # Restart `bundle exec jekyll serve` after editing this file.
