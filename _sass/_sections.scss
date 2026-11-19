@@ -191,17 +191,11 @@
   user-select: all;
 }
 
-// QR page for networking events: same glow and logo, one screen, no scrolling.
+// QR page for networking events: same glow as the landing page, one screen, no scrolling.
+// The code sits inside the logo's brush ring, with the CH monogram in the middle.
 .qr__inner {
-  --gap: clamp(0.75rem, 3vh, 1.75rem);
-  // Size of the code itself; the white card adds a quiet zone around it.
-  --qr: min(68vw, 34vh, 300px);
-}
-
-.qr__logo {
-  width: clamp(56px, 10vh, 88px);
-  height: auto;
-  margin: 0 0 var(--gap);
+  --gap: clamp(0.5rem, 2vh, 1.5rem);
+  --qr: min(90vw, 60vh, 520px);
 }
 
 .qr__title {
@@ -210,30 +204,17 @@
   letter-spacing: -0.04em;
 }
 
-// Dark code on a white card is what phone cameras read most reliably.
 .qr__code {
   display: block;
-  box-sizing: content-box;
   width: var(--qr);
   height: var(--qr);
-  padding: calc(var(--qr) * 0.13);
   margin: 0 0 var(--gap);
-  background: #fff;
-  border-radius: 1.25rem;
-  box-shadow: 0 0 0 4px var(--accent), 0 18px 48px rgba(0, 0, 0, 0.45);
 
   img {
     display: block;
     width: 100%;
     height: 100%;
   }
-}
-
-.qr__hint {
-  margin: 0 0 0.35rem;
-  color: var(--text);
-  font-size: clamp(1.1rem, 2.6vw, 1.4rem);
-  font-weight: 600;
 }
 
 .qr__url {
