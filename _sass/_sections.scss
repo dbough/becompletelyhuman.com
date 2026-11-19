@@ -80,7 +80,7 @@
 }
 
 .soon__title {
-  margin: 0 0 var(--gap);
+  margin: 0 0 calc(var(--gap) * 1.6);
   font-size: clamp(2.75rem, 10vw, 6rem);
   letter-spacing: -0.04em;
 }
