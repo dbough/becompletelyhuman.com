@@ -234,6 +234,18 @@
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 0.02em;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    text-underline-offset: 0.3em;
+  }
+
+  a:hover,
+  a:focus-visible {
+    text-decoration-color: currentColor;
+  }
 }
 
 // Temporary contact card page (/connect/): same look as the landing page, with contact details.
