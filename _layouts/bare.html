@@ -1,0 +1,17 @@
+<!doctype html>
+{%- comment -%}
+  Bare layout: shared <head>, tokens and stylesheet, but no Completely Human
+  header or footer. For subpages that carry their own header and footer,
+  such as solution pages (/reviewchaser/). Set body_class in front matter.
+{%- endcomment %}
+<html lang="en"{% if site.theme_switcher %} data-accent="{{ site.accent }}"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include head.html %}
+</head>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ content }}
+</body>
+</html>

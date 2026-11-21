@@ -7,4 +7,5 @@
 @use "layout";
 @use "components";
 @use "sections";
+@use "solution"; // solution subpages, scoped under .solution
 @use "switcher"; // draft-only: delete this line with the theme switcher
