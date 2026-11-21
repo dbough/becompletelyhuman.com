@@ -22,6 +22,10 @@ baseurl: ""
 # Contact address. It feeds the contact button and the footer.
 email: hello@becompletelyhuman.com
 
+# Google Analytics 4 measurement ID. Leave blank to turn analytics off.
+# Only loads on the deployed site, not in local previews.
+google_analytics: G-2Z4TLY6ER8
+
 # ---------------------------------------------------------------
 # Coming-soon page. While enabled is true, the homepage shows this
 # simple page instead of the full site. Set to false to launch.

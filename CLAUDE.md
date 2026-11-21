@@ -18,7 +18,7 @@ Jekyll 4 site on GitHub Pages (deployed by `.github/workflows/pages.yml`). Full 
 ## Pages
 - `/` coming-soon landing (`coming_soon.enabled` in `_config.yml`; full homepage is `_includes/home.html`). Email there is hello@becompletelyhuman.com.
 - `/qr/` QR code for networking events (points to `/connect/`). `/connect/` temporary contact card with a vCard download (dan@becompletelyhuman.com, 315 559 6139). Both are unlinked, `noindex`, and must stay hard to find. Do not add them to nav, footer, or any sitemap. `connect_link` stays false unless Dan asks.
-- No nav items for utility pages. No analytics or trackers without asking.
+- No nav items for utility pages. Google Analytics 4 is on (Dan approved 2026-11-21; ID in `_config.yml` as `google_analytics`, `_includes/analytics.html`, production builds only). No other analytics or trackers without asking.
 - `/reviewchaser/` solution page (Dan's call, 2026-11-20: named on purpose, an exception to the stealth rule). Uses `_layouts/bare.html` (shared head and tokens, no CH header/footer) with `body_class: solution`; styles live in `_sass/_solution.scss`, all scoped under `.solution`. Its "I'm interested" popup posts to Formspree form `mppdjpvz`. Not linked from the CH homepage or nav yet. Footer says "ReviewChaser is a Completely Human solution."
 
 ## Working with Dan
