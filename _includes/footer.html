@@ -1,6 +1,6 @@
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.legal_name }}</p>
-    {% if page.show_header or site.coming_soon.enabled == false %}<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>{% endif %}
+    {% unless site.coming_soon.enabled %}<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>{% endunless %}
   </div>
 </footer>

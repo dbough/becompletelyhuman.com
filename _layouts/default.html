@@ -8,7 +8,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  {% if page.show_header or site.coming_soon.enabled == false %}{% include header.html %}{% endif %}
+  {% unless site.coming_soon.enabled %}{% include header.html %}{% endunless %}
 
   <main id="main">
     {{ content }}
