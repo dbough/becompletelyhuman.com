@@ -45,7 +45,12 @@
   flex-shrink: 0;
 }
 
-.wordmark__text span {
+// Same treatment as the big title: C and H are the logo-cut glyphs.
+.wordmark__text {
+  letter-spacing: -0.04em;
+}
+
+.wordmark__text > span:not(.glyph) {
   color: var(--accent);
 }
 
