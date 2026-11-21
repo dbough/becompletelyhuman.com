@@ -12,7 +12,7 @@ Jekyll 4 site on GitHub Pages (deployed by `.github/workflows/pages.yml`). Full 
 
 ## Homepage details (locked by Dan, 2026-11-21; change only when he asks)
 - Order: header (logo mark + wordmark, nav What we do / Why / Contact), hero, "How we can help" / "Three ways to succeed." with three cards, "The messy middle is where it happens." (Why), contact form, footer (copyright only, no email).
-- Hero headline "Success can be completely human." Hero paragraph is locked: "Coaching to help you grow. Tech consulting to save you time and money. Content creation to get your brand in front of an audience. Three kinds of work, one approach: be honest, embrace the messy middle between the idea and the final product, and do it in a completely human way." No underline on "completely human" (tabled).
+- Hero headline "Success should be completely human." Hero paragraph is locked: "Coaching to help you grow. Tech consulting to save you time and money. Content creation to get your brand in front of an audience. Three kinds of work, one approach: be honest, embrace the messy middle between the idea and the final product, and do it in a completely human way." No underline on "completely human" (tabled).
 - Card copy lives in `_data/categories.yml`. Cards have no outside links; each ends in "Ask about X" jumping to `#contact`. Tech Consulting says "Twenty-plus years in tech", which must match the Why story (support, networks, software, engineering leadership). Do not claim more than that.
 - Why section: Dan's headshot floats upper left (`.why__photo`, circle crop, `shape-outside: circle(50%)`, `clamp(104px, 28vw, 176px)`), text wraps around it, and the sign-off is "Dan Bough, founder" with the last name in Ember. Ends with "Our goal is to help you be successful, and being completely human is how we do it."
 - Contact form posts to Formspree via `contact_form` in `_config.yml` (fields: name, email, topic, message, honeypot `_gotcha`). Keep the thank-you view and "Prefer email? hello@becompletelyhuman.com".
@@ -23,7 +23,7 @@ Jekyll 4 site on GitHub Pages (deployed by `.github/workflows/pages.yml`). Full 
 
 ## Voice
 - Plain, direct, a little messy, human. No marketing buzzwords, no overselling, never em dashes.
-- Three pillars, in this order: Coaching (life coaching, grow as a person), Tech Consulting (save time and money, including with AI), Content Creation (reach an audience, work with brands). Hero: "Success can be completely human." Core idea: embrace the messy middle; being completely human is how the work gets done. No imposter-syndrome language.
+- Three pillars, in this order: Coaching (life coaching, grow as a person), Tech Consulting (save time and money, including with AI), Content Creation (reach an audience, work with brands). Hero: "Success should be completely human." Core idea: embrace the messy middle; being completely human is how the work gets done. No imposter-syndrome language.
 - Pronouns: "we" for what the company does for customers; "I" only in Dan's own story (the Why section, with his headshot) and the contact intro.
 - Projects in development are stealth: never name them on the site. Describe work by category. (ReviewChaser is the one named exception, below.)
 - Company-first, but Dan's energy comes through.
