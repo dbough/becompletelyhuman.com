@@ -22,6 +22,11 @@ baseurl: ""
 # Contact address. It feeds the contact button and the footer.
 email: hello@becompletelyhuman.com
 
+# Formspree endpoint for the homepage contact form, for example
+# https://formspree.io/f/abcdwxyz. While blank, the contact section shows
+# just the email button. Use a form separate from the ReviewChaser one.
+contact_form: https://formspree.io/f/mdegwnag
+
 # Google Analytics 4 measurement ID. Leave blank to turn analytics off.
 # Only loads on the deployed site, not in local previews.
 google_analytics: G-2Z4TLY6ER8
@@ -31,7 +36,7 @@ google_analytics: G-2Z4TLY6ER8
 # simple page instead of the full site. Set to false to launch.
 # ---------------------------------------------------------------
 coming_soon:
-  enabled: true
+  enabled: false
   eyebrow: Coaching · Consulting · Software · Content
 
 # ---------------------------------------------------------------
@@ -39,8 +44,9 @@ coming_soon:
 # ---------------------------------------------------------------
 hero:
   pick: 1
-  eyebrow: Coaching · Consulting · Software · Content · Writing
+  eyebrow: Coaching · Tech Consulting · Content Creation
   headlines:
+    - "Success can be completely human."
     - "Real work from someone who's still figuring it out."
     - "Say the thing. Try the thing. Learn from the mess."
     - "Imposter syndrome is loud. We do the work anyway."

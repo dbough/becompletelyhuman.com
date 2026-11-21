@@ -16,7 +16,7 @@
   name: Ember
   accent: "#ff7a3d"
   accent_hi: "#ff9563"
-  on_accent: "#141210"
+  on_accent: "#ffffff"
 
 - id: marigold
   name: Marigold

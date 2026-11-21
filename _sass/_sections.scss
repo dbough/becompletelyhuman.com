@@ -289,3 +289,130 @@
 .soon .soon__email--second {
   margin-top: 0.6rem;
 }
+
+// Underlined phrase in the hero headline.
+.hero__underline {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.14em;
+  text-decoration-skip-ink: none;
+}
+
+// Sign-off mirrors the wordmark: first word white, last word Ember.
+.why__sign span {
+  color: var(--accent);
+}
+
+// Headshot floats top-left of the story so the words wrap around it.
+.why__photo {
+  float: left;
+  width: clamp(104px, 28vw, 176px);
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0.35rem 1.25rem 0.5rem 0;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  object-fit: cover;
+  shape-outside: circle(50%);
+}
+
+.why__sign {
+  clear: both;
+}
+
+// Contact form
+.contact__form,
+.contact__thanks {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact__thanks {
+  text-align: center;
+}
+
+.contact .form-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 520px) {
+  .contact .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact .form-field--full {
+    grid-column: 1 / -1;
+  }
+}
+
+.contact .form-field {
+  label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.65rem 0.85rem;
+    background: var(--bg);
+    color: var(--heading);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font: inherit;
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
+  }
+}
+
+.contact .form-honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+.contact .contact__status {
+  margin: 1rem auto 0;
+  font-size: 0.95rem;
+}
+
+.contact .contact__status--error {
+  color: var(--accent);
+}
+
+.contact .contact__address a {
+  color: var(--heading);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  text-underline-offset: 0.3em;
+}
+
+.contact .contact__address a:hover {
+  color: var(--accent);
+}
+
+.contact .btn--block {
+  display: block;
+  width: 100%;
+}
