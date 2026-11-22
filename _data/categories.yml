@@ -3,7 +3,8 @@
 #
 # Fields:
 #   name         Card title
-#   icon         An emoji (shown decoratively, hidden from screen readers)
+#   icon         Name of a line icon in _includes/icon.html (heart-handshake,
+#                laptop, compass, sprout, wrench, video, mail). Decorative, hidden from screen readers.
 #   description  One to three short sentences
 #   link         Optional. Full URL to another site. Leave blank and the
 #                card points to the contact section instead.
@@ -14,7 +15,7 @@
 # ---------------------------------------------------------------
 
 - name: Coaching
-  icon: "🧭"
+  icon: heart-handshake
   description: >-
     Life coaching for anyone looking to grow. We'll partner with you, be your
     biggest supporter and fan, and help you get where you want to go.
@@ -22,7 +23,7 @@
   link_label:
 
 - name: Tech Consulting
-  icon: "🛠️"
+  icon: laptop
   description: >-
     Twenty-plus years in tech, from support and networks to software and
     engineering leadership, put to work for you and your business. We help
@@ -32,7 +33,7 @@
   link_label:
 
 - name: Content Creation
-  icon: "🎥"
+  icon: video
   description: >-
     Reach more people. Videos and short-form content for brands that want
     to get in front of the audience we're building. Made by a real person,

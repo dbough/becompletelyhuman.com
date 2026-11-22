@@ -7,6 +7,7 @@ Jekyll 4 site on GitHub Pages (deployed by `.github/workflows/pages.yml`). Full 
 - Font: Inter. The "C" in Completely (white) and "H" in Human (Ember) are logo-cut glyph masks (`.glyph--c`, `.glyph--h`). Use that title treatment wherever the brand name is shown big. Do not replace it with a different font. (Feeling Passionate needs a paid license; not licensed.)
 - Logo: white brush ring, orange script CH. Files in `assets/img/`. Never redraw or recolor it by hand.
 - Buttons are rare. Primary button = Ember with white text (set once via `on_accent` in `_data/palettes.yml`). Secondary actions are quiet gray underlined text links (`.soon__email`).
+- Card icons: white line icons on a solid Ember tile (`.card__icon`), never emoji. Icons live in `_includes/icon.html` (Lucide-style, 24px grid, stroke 2) and are used by name: `icon: laptop` in `_data/categories.yml`, or `{% include icon.html name="map-pin" %}` in a page. Homepage: Coaching = heart-handshake, Tech Consulting = laptop, Content Creation = video (Dan's picks, 2026-11-22). Add new icons to that file in the same style.
 - Every colour comes from CSS variables (`_sass/_tokens.scss`, accent from `_data/palettes.yml`). No hard-coded hex in components.
 - `/qr/` and `/connect/` (and the coming-soon page if re-enabled) are each exactly one screen: no scrolling on normal phones and laptops. Check at 1280x800, 390x844, 360x640 after any change.
 

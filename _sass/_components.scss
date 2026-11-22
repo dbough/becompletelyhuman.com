@@ -121,9 +121,13 @@
   height: 52px;
   margin-bottom: 1.25rem;
   border-radius: 14px;
-  background: var(--accent-tint);
-  font-size: 1.6rem;
-  line-height: 1;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.card__icon .icon {
+  width: 26px;
+  height: 26px;
 }
 
 .card__title {
