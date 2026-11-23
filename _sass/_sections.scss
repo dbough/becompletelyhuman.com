@@ -262,6 +262,18 @@
   font-size: clamp(2.5rem, 9vw, 4.75rem);
 }
 
+// Round headshot above the name, same treatment as the Why section.
+.connect__photo {
+  display: block;
+  width: clamp(56px, 11vh, 104px);
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 0 calc(var(--gap) * 0.5);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .connect__name {
   margin: 0 0 calc(var(--gap) * 1.2);
   color: var(--heading);
@@ -284,6 +296,43 @@
   align-items: center;
   gap: 0.6rem;
   margin: 0;
+}
+
+// Short phones: shrink the logo, photo and gaps so the card still fits one screen.
+@media (max-height: 700px) {
+  .soon.connect {
+    padding-block: 0.75rem;
+  }
+
+  .connect__inner {
+    --gap: 1.1rem;
+  }
+
+  .connect__logo {
+    width: 52px;
+  }
+
+  .connect__title {
+    margin-bottom: 0.6rem;
+  }
+
+  .connect__photo {
+    width: 60px;
+    margin-bottom: 0.4rem;
+  }
+
+  .connect__name {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .connect__save {
+    margin-bottom: 1rem;
+  }
+
+  .connect__links {
+    gap: 0.4rem;
+  }
 }
 
 .soon .soon__email--second {
