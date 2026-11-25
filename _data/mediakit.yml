@@ -49,7 +49,7 @@ highlights:
 channels:
   - platform: YouTube
     handle: Dan Unfinished
-    icon: video
+    icon: youtube
     url: "https://www.youtube.com/@danunfinished"
     period: Last 28 days
     stats:
@@ -69,7 +69,7 @@ channels:
 
   - platform: Instagram
     handle: "@the.dan.b"
-    icon: camera
+    icon: instagram
     url: "https://www.instagram.com/the.dan.b/"
     period: Last 30 days
     stats:
