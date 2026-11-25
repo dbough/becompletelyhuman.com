@@ -18,6 +18,13 @@ noindex: true
       <h1 id="hero-title" class="hero__title">{{ kit.name }}</h1>
       <p class="hero__lede">{{ kit.tagline }}</p>
       <p class="hero__lede">{{ kit.bio }}</p>
+      {%- if kit.highlights.size > 0 %}
+      <ul class="kit__highlights" role="list">
+        {%- for h in kit.highlights %}
+        <li><strong>{{ h.value }}</strong><span>{{ h.label }}</span></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
     </div>
   </section>
 
@@ -41,13 +48,16 @@ noindex: true
         <li class="card">
           <span class="card__icon" aria-hidden="true">{% include icon.html name=ch.icon %}</span>
           <h3 class="card__title">{{ ch.platform }}</h3>
-          <p class="card__handle">{{ ch.handle }}</p>
+          <p class="card__handle">{{ ch.handle }}{% if ch.period %} &middot; {{ ch.period }}{% endif %}</p>
           <dl class="metrics">
-            <div><dt>Followers</dt><dd>{{ ch.followers }}</dd></div>
-            <div><dt>Avg views</dt><dd>{{ ch.avg_views }}</dd></div>
-            <div><dt>Engaged</dt><dd>{{ ch.engagement }}</dd></div>
+            {%- for s in ch.stats %}
+            <div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
+            {%- endfor %}
           </dl>
-          <p class="card__text">{{ ch.note }}</p>
+          <p class="card__text{% if ch.context %} card__text--tight{% endif %}">{{ ch.note }}</p>
+          {%- if ch.context %}
+          <p class="card__text">{{ ch.context }}</p>
+          {%- endif %}
           {%- if ch.url and ch.url != "" %}
           <a class="card__link" href="{{ ch.url }}">Visit the channel<span class="card__arrow" aria-hidden="true">↗</span></a>
           {%- endif %}
@@ -63,11 +73,19 @@ noindex: true
         <p class="eyebrow">Audience</p>
         <h2 id="audience-title">Who's watching.</h2>
       </header>
-      <dl class="facts">
+      <div class="split split--wide">
         {%- for a in kit.audience %}
-        <div><dt>{{ a.label }}</dt><dd>{{ a.value }}</dd></div>
+        <div class="panel">
+          <h3>{{ a.channel }}</h3>
+          <p class="panel__sub">{{ a.period }}</p>
+          <dl class="kit__rows">
+            {%- for r in a.rows %}
+            <div><dt>{{ r.label }}</dt><dd>{{ r.value }}</dd></div>
+            {%- endfor %}
+          </dl>
+        </div>
         {%- endfor %}
-      </dl>
+      </div>
     </div>
   </section>
 
@@ -89,18 +107,22 @@ noindex: true
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">Ways to work together</p>
-        <h2 id="offers-title">Formats.</h2>
+        <h2 id="offers-title">Formats and rates.</h2>
       </header>
 
-      <ul class="card-grid" role="list">
+      <ul class="card-grid card-grid--two" role="list">
         {%- for o in kit.offers %}
         <li class="card">
           <span class="card__icon" aria-hidden="true">{% include icon.html name=o.icon %}</span>
           <h3 class="card__title">{{ o.title }}</h3>
+          <p class="card__price">{{ o.price }}</p>
           <p class="card__text">{{ o.text }}</p>
         </li>
         {%- endfor %}
       </ul>
+      {%- if kit.rates_note %}
+      <p class="note">{{ kit.rates_note }}</p>
+      {%- endif %}
     </div>
   </section>
 
@@ -114,7 +136,7 @@ noindex: true
       <ul class="sample-list">
         {%- for s in kit.samples %}
         <li>
-          <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
+          <h3>{% if s.url and s.url != "" %}<a href="{{ s.url }}">{{ s.title }}</a>{% else %}{{ s.title }}{% endif %}</h3>
           <p>{{ s.platform }}{% if s.note %}. {{ s.note }}{% endif %}</p>
         </li>
         {%- endfor %}
@@ -177,17 +199,7 @@ noindex: true
     </div>
   </section>
 
-  <section class="section section--band" aria-labelledby="rates-title">
-    <div class="container">
-      <header class="section__header">
-        <p class="eyebrow">Rates</p>
-        <h2 id="rates-title">What it costs.</h2>
-        <p>{{ kit.rates }}</p>
-      </header>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="process-title">
+  <section class="section section--band" aria-labelledby="process-title">
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">How it works</p>

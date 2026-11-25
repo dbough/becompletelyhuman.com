@@ -2,11 +2,13 @@
 layout: default
 title: Content Creation
 description: >-
-  Videos and short-form content made by a real person, mistakes included.
-  Building an audience, and working with brands that want to reach it.
+  Honest videos and short-form content from a real person, mistakes included.
+  Two channels, a growing audience, and room to work with brands that want
+  to reach it.
 permalink: /content-creation/
 noindex: true
 ---
+{%- assign kit = site.data.mediakit -%}
 <div class="pillar">
 
   <section class="hero" aria-labelledby="hero-title">
@@ -14,15 +16,23 @@ noindex: true
       <p class="eyebrow">Content Creation</p>
       <h1 id="hero-title" class="hero__title">Reach more people.</h1>
       <p class="hero__lede">
-        We make videos and short-form content, and we're building an
-        audience while we do it. Brands that want to get in front of that
-        audience can work with us, and the people who follow along get
-        something honest.
+        Two channels, one honest approach: Dan Unfinished on YouTube and
+        @the.dan.b on Instagram. We make videos about work, change, tech,
+        and getting older with ADHD and faith, and we're open to brand
+        partnerships, sponsorships, and UGC from brands that want to reach
+        the people who watch.
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="/media-kit/">See the media kit</a>
         <a class="btn btn--outline" href="#make">What we make</a>
       </div>
+      {%- if kit.highlights.size > 0 %}
+      <ul class="kit__highlights" role="list">
+        {%- for h in kit.highlights %}
+        <li><strong>{{ h.value }}</strong><span>{{ h.label }}</span></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
     </div>
   </section>
 
@@ -36,18 +46,18 @@ noindex: true
       <ul class="card-grid" role="list">
         <li class="card">
           <span class="card__icon" aria-hidden="true">{% include icon.html name="video" %}</span>
-          <h3 class="card__title">Long-form video</h3>
-          <p class="card__text">Thoughtful, blog-style videos on YouTube about starting over, work, tech, and figuring out the next chapter in public. It's the Dan Unfinished channel.</p>
+          <h3 class="card__title">Dan Unfinished</h3>
+          <p class="card__text">Long-form YouTube videos about career setbacks, the tech industry today, and rebuilding work and identity after a mid-career disruption. Honest and ongoing, with the rough parts left in.</p>
         </li>
         <li class="card">
           <span class="card__icon" aria-hidden="true">{% include icon.html name="smartphone" %}</span>
-          <h3 class="card__title">Short-form</h3>
-          <p class="card__text">Humor and quick takes on Instagram Reels and TikTok. Shorter, funnier, and just as honest.</p>
+          <h3 class="card__title">@the.dan.b</h3>
+          <p class="card__text">Short, funny, sometimes inspirational Instagram Reels about being middle aged, ADHD, and faith. Funny to us, anyway.</p>
         </li>
         <li class="card">
           <span class="card__icon" aria-hidden="true">{% include icon.html name="megaphone" %}</span>
           <h3 class="card__title">Content for brands</h3>
-          <p class="card__text">Sponsored spots on our channels, or videos made for you to post on your own. Real people on camera, not a stock ad.</p>
+          <p class="card__text">Sponsored spots on our channels, or videos made for you to post on your own. A real person on camera, not a stock ad.</p>
         </li>
       </ul>
     </div>
@@ -82,7 +92,7 @@ noindex: true
         <h2 id="themes-title">Work, change, tech, and a few jokes.</h2>
       </header>
       <ul class="tags">
-        {%- for theme in site.data.mediakit.themes %}
+        {%- for theme in kit.themes %}
         <li>{{ theme }}</li>
         {%- endfor %}
       </ul>
@@ -94,8 +104,13 @@ noindex: true
       <header class="section__header">
         <p class="eyebrow">For brands</p>
         <h2 id="brands-title">Want to reach this audience?</h2>
-        <p>The media kit has the channels, the audience, the formats, and how a project works. It's kept up to date, so it's the one link to send around.</p>
+        <p>The biggest group of viewers is in the US and between 35 and 54. Here are the ways we can work together. The media kit has the numbers, rates, and how a project goes.</p>
       </header>
+      <ul class="tags">
+        {%- for o in kit.offers %}
+        <li>{{ o.title }}</li>
+        {%- endfor %}
+      </ul>
       <div class="hero__actions">
         <a class="btn btn--primary" href="/media-kit/">See the media kit</a>
       </div>

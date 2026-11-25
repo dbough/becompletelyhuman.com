@@ -357,3 +357,106 @@
   font-size: 1.15rem;
   font-weight: 700;
 }
+
+// Media kit: headline numbers under the bio, also reused on /content-creation/.
+.kit__highlights {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+  max-width: 780px;
+  margin: 2rem auto 0;
+  padding: 0;
+}
+
+.kit__highlights li {
+  padding: 1.1rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.kit__highlights strong {
+  display: block;
+  color: var(--heading);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.kit__highlights span {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+// Audience panels: label above value, thin rules between rows.
+.split--wide {
+  max-width: 980px;
+}
+
+.panel__sub {
+  margin: -0.5rem 0 1.25rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.kit__rows {
+  margin: 0;
+}
+
+.kit__rows div {
+  padding-block: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+.kit__rows div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.kit__rows div:last-child {
+  padding-bottom: 0;
+}
+
+.kit__rows dt {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kit__rows dd {
+  margin: 0.2rem 0 0;
+  color: var(--heading);
+  font-weight: 600;
+}
+
+// Price tag on the formats and rates cards.
+.card__price {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.8rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+// Four cards read better as two rows of two than as three plus one.
+@media (min-width: 980px) {
+  .pillar .card-grid--two .card {
+    flex-basis: calc((100% - var(--gap)) / 2);
+  }
+}
+
+// When a card has a second paragraph, the first one shouldn't stretch.
+.pillar .card__text--tight {
+  flex-grow: 0;
+  margin-bottom: 1rem;
+}

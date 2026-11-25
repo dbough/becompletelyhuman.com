@@ -29,10 +29,47 @@
     border: 0;
   }
 
+  // Keep headings with their content instead of stranding them at the
+  // bottom of a page. Cards use a grid here because flex rows split badly
+  // across pages.
+  .pillar .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+
+  .pillar .card-grid .card {
+    flex-basis: auto;
+  }
+
+  .pillar .section__header {
+    break-inside: avoid;
+    break-after: avoid;
+    margin-bottom: 1.25rem;
+  }
+
+  .pillar .card {
+    padding: 1.1rem;
+  }
+
+  .pillar .steps {
+    gap: 0.6rem;
+  }
+
+  .pillar .steps li {
+    padding-block: 0.9rem;
+  }
+
+  .pillar .kit__photo {
+    width: 96px;
+    margin-bottom: 1rem;
+  }
+
   .card,
   .panel,
   .steps li,
   .facts div,
+  .kit__highlights li,
   .sample-list li {
     break-inside: avoid;
   }

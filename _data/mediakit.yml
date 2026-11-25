@@ -3,19 +3,25 @@
 # The page fills itself in from here.
 #
 # Monthly update (about 10 minutes):
-#   1. Open each platform's analytics (last 28 days).
+#   1. Open YouTube Studio (Media Kit tab, last 28 days) and Instagram
+#      Insights (Professional dashboard, last 30 days).
 #   2. Update the numbers below. Round them: 4.2K, not 4,187.
 #   3. Change `updated` to today's date.
 #   4. Commit and push. The "Updated" stamp on the page follows.
 #
-# While `draft: true`, the page shows a banner and every TBD is a
-# placeholder. Delete the `draft` line when the real numbers are in.
-# Never put a made-up number here.
+# Numbers last taken from YouTube Studio (28 days) and Instagram (30 days)
+# on 2026-11-25. Never put a made-up number here. If a number isn't
+# available, leave the line out instead of writing TBD.
+#
+# While `draft: true` is set, the page shows a banner. It's off now that the
+# real numbers are in. Add `draft: true` back if you start a big rewrite.
+#
+# Quote anything with a colon in it, like "3:56". Without quotes, YAML
+# reads it as a number.
 #
 # To save a PDF: open /media-kit/, print, choose "Save as PDF".
 # ---------------------------------------------------------------
 
-draft: true
 updated: 2026-11-25
 
 # Third person, two or three sentences. This is the first thing a brand reads.
@@ -23,92 +29,162 @@ name: Dan Bough
 tagline: A guy redesigning the next chapter of his life, out loud.
 bio: >-
   Dan Bough spent more than twenty years in tech, from support and networks
-  to software and engineering leadership. Now he makes videos about starting
-  over, work, and figuring it out as he goes: honest, a little messy, and
-  funny when it fits. No masks.
+  to software and engineering leadership. After a mid-career setback, he
+  started making videos about what comes next: the realities of the tech
+  industry, rebuilding work and identity, and being middle aged with ADHD
+  and faith. Honest, a little messy, and funny when it fits.
+
+# Three big numbers at the top of the page and on /content-creation/.
+highlights:
+  - value: 708K
+    label: YouTube views, last 28 days
+  - value: 279K
+    label: Instagram views, last 30 days
+  - value: About 70%
+    label: of viewers are 35 to 54, on both channels
 
 # One card per channel. Leave url blank until the link is confirmed (the
-# card then shows no link). Numbers are text, so "4.2K" and "TBD" both work.
+# card then shows no link). Exactly three stats per card keeps the grid tidy.
 channels:
   - platform: YouTube
     handle: Dan Unfinished
     icon: video
     url: ""
-    note: Long-form videos, usually 10 to 30 minutes.
-    followers: TBD
-    avg_views: TBD
-    engagement: TBD
+    period: Last 28 days
+    stats:
+      - label: Subscribers
+        value: 3.5K
+      - label: Views
+        value: 708K
+      - label: Hours watched
+        value: 20.6K
+    note: >-
+      Honest, long-form videos about career setbacks, the tech industry, and
+      rebuilding after mid-career disruption. People watch about 4 minutes
+      of each video on average, around a third of it.
+    context: >-
+      Most of the recent views come from two videos that took off (listed
+      below). 19 videos so far, and the channel is still young.
 
   - platform: Instagram
     handle: "@the.dan.b"
     icon: camera
     url: "https://www.instagram.com/the.dan.b/"
-    note: Short-form humor, mostly Reels.
-    followers: TBD
-    avg_views: TBD
-    engagement: TBD
-
-  - platform: TikTok
-    handle: TBD
-    icon: smartphone
-    url: ""
-    note: Short-form, newer channel.
-    followers: TBD
-    avg_views: TBD
-    engagement: TBD
+    period: Last 30 days
+    stats:
+      - label: Followers
+        value: 528
+      - label: Views
+        value: 279K
+      - label: Interactions
+        value: 22K
+    note: >-
+      Short, funny, sometimes inspirational Reels about being middle aged,
+      ADHD, and faith. Nearly all views are Reels.
+    context: >-
+      A small account that's growing fast, up from about 210 followers a
+      month ago. 96% of views come from people who don't follow yet.
 
 # From each platform's audience analytics. Brands care about this more
-# than follower counts.
+# than follower counts. Percentages are rounded to whole numbers.
 audience:
-  - label: Age range
-    value: TBD
-  - label: Gender split
-    value: TBD
-  - label: Top locations
-    value: TBD
+  - channel: YouTube
+    period: Last 28 days
+    rows:
+      - label: Age
+        value: 35 to 44 (38%), 45 to 54 (32%), 25 to 34 (13%), 55 to 64 (12%)
+      - label: Gender
+        value: 92% men, 8% women
+      - label: Top locations
+        value: United States 47%, Canada 7%, United Kingdom 6%, India 4%
+      - label: Household income
+        value: 63% in the top 10% of household incomes, per YouTube's estimates
+      - label: Interests
+        value: Business news, investing, retirement planning
+
+  - channel: Instagram
+    period: Last 30 days
+    rows:
+      - label: Age
+        value: 35 to 44 (43%), 45 to 54 (32%), 25 to 34 (13%), 55 to 64 (8%)
+      - label: Gender
+        value: 50% women, 50% men
+      - label: Top locations
+        value: United States 62%, United Kingdom 7%, Australia 5%, Canada 5%
+      - label: Language
+        value: 92% English
 
 themes:
-  - Career change and job search
+  - Career setbacks and rebuilding
   - Tech and AI
-  - Leadership and management
-  - Starting over
+  - Engineering management
+  - Middle age
+  - ADHD
+  - Faith
   - Humor
 
+# Formats and rates. Price is text so "$1,000" and "Quoted per project" both
+# work. Titles stay short: they also show as tags on /content-creation/.
 offers:
-  - title: Sponsored spot in a long-form video
+  - title: Mid-roll sponsor spot
     icon: video
-    text: A mention or mid-roll in a YouTube video, in Dan's own words, clearly labeled as sponsored.
+    price: $500
+    text: A 60 to 90 second spot in the middle of a Dan Unfinished video, in Dan's own words and clearly labeled as sponsored.
   - title: Dedicated video
     icon: camera
-    text: A full video built around your product or service, from honest first impressions to a real walkthrough.
-  - title: Short-form
+    price: $1,000
+    text: A full YouTube video, up to 10 minutes, built around your product or service. Honest first impressions and a real walkthrough.
+  - title: Instagram Reel
     icon: smartphone
-    text: A Reel or TikTok, made to fit the platform instead of copied from an ad.
-  - title: Videos for your channels
+    price: Quoted per project
+    text: A Reel made to fit the platform instead of copied from an ad.
+  - title: UGC for your channels
     icon: megaphone
-    text: Content made for you to post yourself, often called UGC, with usage rights agreed up front.
+    price: Quoted per project
+    text: Videos made for you to post yourself, with usage rights agreed up front.
 
-# Add real pieces only. Best performers, not newest. Leave the list empty
+rates_note: >-
+  YouTube rates are current as of this update and may go up as the channel
+  grows. Instagram and UGC are quoted per project. Extended usage rights,
+  exclusivity, or a rush timeline are quoted separately.
+
+# Real pieces only. Best performers, not newest. Leave the list empty
 # ([]) and the section stays out of the page (in draft it shows a reminder).
-# Fields: title, platform, url, note
-samples: []
+# Fields: title, platform, url (optional), note
+samples:
+  - title: "Engineering Manager, fired at 48, AI is changing things quickly"
+    platform: YouTube
+    url: "https://www.youtube.com/watch?v=xKAOcLvibNE"
+    note: 590K views
+  - title: "Starting to struggle after getting fired at 48, 3+ months later."
+    platform: YouTube
+    url: "https://www.youtube.com/watch?v=i61kehC97o0"
+    note: 131K views
+  - title: "When your ADHD meds wear off..."
+    platform: Instagram Reel
+    url: ""
+    note: 197K views
+  - title: "Trying to read the Bible with ADHD..."
+    platform: Instagram Reel
+    url: ""
+    note: 64K views
 
 # Add a name only after the partner says it's fine to list them.
 # Leave empty ([]) and the section stays out of the page.
 partners: []
 
 fit_yes:
-  - Products and services we'd use ourselves
+  - Products and services Dan would use himself
+  - Career, job search, and professional growth
+  - Tech, AI, and productivity tools
+  - ADHD-friendly tools, and faith-friendly brands
   - Honest reviews, including what we didn't love
-  - Career, tech, productivity and creator tools
   - Brands happy to let a real person say it their own way
 fit_no:
   - Anything we haven't tried or wouldn't recommend
   - Scripts to read word for word
   - Hidden sponsorships. Paid content is always labeled
   - Gambling, get-rich-quick offers and similar
-
-rates: Rates on request. They depend on the format, the usage rights, and how long the content stays up.
 
 process:
   - title: Say hello
