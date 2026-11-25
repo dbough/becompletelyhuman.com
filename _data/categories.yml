@@ -19,8 +19,8 @@
   description: >-
     Life coaching for anyone looking to grow. We'll partner with you, be your
     biggest supporter and fan, and help you get where you want to go.
-  link: /coaching/
-  link_label: Learn more
+  link:
+  link_label:
 
 - name: Tech Consulting
   icon: laptop
@@ -29,8 +29,8 @@
     engineering leadership, put to work for you and your business. We help
     you save time and money with technology, including AI, and often with
     the tools you already use.
-  link: /tech-consulting/
-  link_label: Learn more
+  link:
+  link_label:
 
 - name: Content Creation
   icon: video
