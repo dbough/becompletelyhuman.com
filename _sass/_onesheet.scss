@@ -1,0 +1,239 @@
+// ---------------------------------------------------------------
+// One-page media kit PDF (/media-kit/one-sheet/). Printed to
+// /assets/Dan-Bough-Media-Kit.pdf by the deploy workflow, then removed
+// from the site. Light paper, dark ink bars, Ember accent. US Letter.
+// ---------------------------------------------------------------
+
+@page {
+  size: Letter;
+  margin: 0;
+}
+
+body.onesheet {
+  margin: 0;
+  background: var(--sheet-bg);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.onesheet .sheet {
+  box-sizing: border-box;
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  padding: 0.35in 0.42in;
+  background: var(--paper);
+  color: var(--sheet-text);
+  font-size: 10.5pt;
+  line-height: 1.4;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1in;
+}
+
+.onesheet p,
+.onesheet ul,
+.onesheet h1,
+.onesheet h2 {
+  margin: 0;
+}
+
+.onesheet .sheet__head {
+  display: flex;
+  align-items: center;
+  gap: 0.3in;
+  padding: 0.14in 0.28in;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.onesheet .sheet__photo {
+  width: 0.8in;
+  height: 0.8in;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.onesheet .sheet__name {
+  color: var(--paper);
+  font-size: 27pt;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.onesheet .sheet__tagline {
+  margin-top: 0.05in;
+  color: var(--accent);
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+.onesheet .sheet__rule {
+  height: 4px;
+  margin-top: -0.04in;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.onesheet .sheet__tag {
+  display: inline-block;
+  margin-bottom: 0.06in;
+  padding: 0.03in 0.14in;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 6px;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.onesheet .sheet__about p {
+  font-size: 10.5pt;
+}
+
+.onesheet .sheet__box {
+  border: 1px solid var(--sheet-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.onesheet .sheet__bar {
+  padding: 0.07in 0.18in;
+  background: var(--ink);
+  border-bottom: 3px solid var(--accent);
+  color: var(--paper);
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.onesheet .sheet__channels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.onesheet .sheet__channel {
+  padding: 0.1in 0.18in 0.12in;
+}
+
+.onesheet .sheet__channel + .sheet__channel {
+  border-left: 1px solid var(--sheet-border);
+}
+
+.onesheet .sheet__channel-name {
+  color: var(--ink);
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.onesheet .sheet__channel-name span {
+  color: var(--sheet-dim);
+  font-size: 10pt;
+  font-weight: 500;
+}
+
+.onesheet .sheet__period {
+  color: var(--accent-ink);
+  font-size: 9pt;
+  font-weight: 600;
+}
+
+.onesheet .sheet__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.1in;
+  margin-top: 0.08in;
+  padding: 0;
+  list-style: none;
+}
+
+.onesheet .sheet__stats strong {
+  display: block;
+  color: var(--ink);
+  font-size: 18pt;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.onesheet .sheet__stats span {
+  font-size: 9pt;
+}
+
+.onesheet .sheet__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.1in;
+  align-content: start;
+  flex: 1;
+  min-height: 0;
+}
+
+.onesheet .sheet__cols .sheet__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.onesheet .sheet__body {
+  padding: 0.08in 0.18in 0.1in;
+  font-size: 9pt;
+}
+
+.onesheet .sheet__body ul {
+  padding-left: 1.1em;
+}
+
+.onesheet .sheet__body li + li {
+  margin-top: 0.03in;
+}
+
+.onesheet .sheet__body b {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.onesheet .sheet__sub {
+  margin: 0.06in 0 0.03in;
+  color: var(--ink);
+  font-size: 9pt;
+  font-weight: 700;
+}
+
+.onesheet .sheet__sub:first-child {
+  margin-top: 0;
+}
+
+.onesheet .sheet__dim {
+  color: var(--sheet-dim);
+  font-size: 9pt;
+}
+
+.onesheet .sheet__foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25in;
+  padding: 0.14in 0.2in;
+  background: var(--ink);
+  border-radius: 10px;
+  color: var(--paper);
+  font-size: 11pt;
+  font-weight: 600;
+}
+
+.onesheet .sheet__foot i {
+  width: 2px;
+  height: 0.22in;
+  background: var(--accent);
+}
+
+.onesheet .sheet__stamp {
+  margin-top: -0.06in;
+  color: var(--sheet-dim);
+  font-size: 8.5pt;
+  text-align: center;
+}

@@ -18,6 +18,7 @@ noindex: true
       <h1 id="hero-title" class="hero__title">{{ kit.name }}</h1>
       <p class="hero__lede">{{ kit.tagline }}</p>
       <p class="hero__lede">{{ kit.bio }}</p>
+      <p class="kit__download no-print"><a href="{{ '/assets/Dan-Bough-Media-Kit.pdf' | relative_url }}" download>Download the one-page PDF</a></p>
       {%- if kit.highlights.size > 0 %}
       <ul class="kit__highlights" role="list">
         {%- for h in kit.highlights %}

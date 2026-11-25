@@ -42,6 +42,19 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Make the media kit PDF
+        # Prints /media-kit/one-sheet/ with headless Chrome so the PDF always
+        # matches _data/mediakit.yml, then removes that page from the site.
+        run: |
+          (cd _site && python3 -m http.server 4000 >/dev/null 2>&1 &)
+          sleep 2
+          google-chrome --headless --no-sandbox --disable-gpu --no-pdf-header-footer \
+            --virtual-time-budget=10000 \
+            --print-to-pdf=_site/assets/Dan-Bough-Media-Kit.pdf \
+            "http://localhost:4000/media-kit/one-sheet/"
+          test -s _site/assets/Dan-Bough-Media-Kit.pdf
+          rm -rf _site/media-kit/one-sheet
+
       - name: Upload the built site
         uses: actions/upload-pages-artifact@v5 # uploads ./_site by default
 

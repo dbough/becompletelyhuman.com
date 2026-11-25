@@ -19,7 +19,10 @@
 # Quote anything with a colon in it, like "3:56". Without quotes, YAML
 # reads it as a number.
 #
-# To save a PDF: open /media-kit/, print, choose "Save as PDF".
+# The "Download the one-page PDF" link on /media-kit/ points at a PDF the
+# deploy builds from this file (page: media-kit/one-sheet/). Nothing to
+# maintain: update the numbers and push. The full page also prints with
+# Save as PDF if someone wants the long version.
 # ---------------------------------------------------------------
 
 updated: 2026-11-25

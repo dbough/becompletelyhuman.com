@@ -513,3 +513,20 @@
 .pillar .promises + .hero__actions {
   margin-top: 2.5rem;
 }
+
+// Quiet download link under the media kit intro.
+.pillar .kit__download {
+  margin: 1.25rem 0 0;
+}
+
+.pillar .kit__download a {
+  color: var(--heading);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  text-underline-offset: 0.3em;
+}
+
+.pillar .kit__download a:hover {
+  color: var(--accent);
+}

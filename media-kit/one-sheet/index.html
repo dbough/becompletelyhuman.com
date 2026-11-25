@@ -1,0 +1,108 @@
+---
+layout: bare
+title: Media Kit One-Sheet
+description: One-page PDF version of the media kit. Built from _data/mediakit.yml.
+permalink: /media-kit/one-sheet/
+noindex: true
+body_class: onesheet
+---
+{%- comment -%}
+  Print-only source for the downloadable media kit PDF. The GitHub Actions
+  workflow prints this page to /assets/Dan-Bough-Media-Kit.pdf on every
+  deploy, then removes the page from the site. Content comes only from
+  _data/mediakit.yml, so the PDF never goes stale.
+{%- endcomment -%}
+{%- assign kit = site.data.mediakit -%}
+<main id="main" class="sheet">
+
+  <header class="sheet__head">
+    <img class="sheet__photo" src="{{ '/assets/img/dan-headshot.jpg' | relative_url }}" alt="" width="640" height="640">
+    <div>
+      <h1 class="sheet__name">{{ kit.name }}</h1>
+      <p class="sheet__tagline">{{ kit.tagline }}</p>
+    </div>
+  </header>
+  <div class="sheet__rule"></div>
+
+  <section class="sheet__about" aria-labelledby="s-about">
+    <h2 id="s-about" class="sheet__tag">About</h2>
+    <p>{{ kit.bio }}</p>
+  </section>
+
+  <section class="sheet__box" aria-labelledby="s-perf">
+    <h2 id="s-perf" class="sheet__bar">Performance snapshot</h2>
+    <div class="sheet__channels">
+      {%- for ch in kit.channels %}
+      <div class="sheet__channel">
+        <p class="sheet__channel-name">{{ ch.platform }} <span>{{ ch.handle }}</span></p>
+        <p class="sheet__period">{{ ch.period }}</p>
+        <ul class="sheet__stats" role="list">
+          {%- for s in ch.stats %}
+          <li><strong>{{ s.value }}</strong><span>{{ s.label }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <div class="sheet__cols">
+    <section class="sheet__box" aria-labelledby="s-aud">
+      <h2 id="s-aud" class="sheet__bar">Audience</h2>
+      <div class="sheet__body">
+        {%- for a in kit.audience %}
+        <p class="sheet__sub">{{ a.channel }}</p>
+        <ul>
+          {%- for r in a.rows limit: 3 %}
+          <li><b>{{ r.label }}:</b> {{ r.value }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section class="sheet__box" aria-labelledby="s-top">
+      <h2 id="s-top" class="sheet__bar">Content that performs</h2>
+      <div class="sheet__body">
+        <ul>
+          {%- for s in kit.samples %}
+          <li>&ldquo;{{ s.title }}&rdquo; <span class="sheet__dim">{{ s.platform }}, {{ s.note }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="sheet__box" aria-labelledby="s-fit">
+      <h2 id="s-fit" class="sheet__bar">Good fit for</h2>
+      <div class="sheet__body">
+        <ul>
+          {%- for f in kit.fit_yes %}
+          <li>{{ f }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="sheet__box" aria-labelledby="s-rates">
+      <h2 id="s-rates" class="sheet__bar">Formats and rates</h2>
+      <div class="sheet__body">
+        <ul>
+          {%- for o in kit.offers %}
+          <li><b>{{ o.title }}:</b> {{ o.price }}</li>
+          {%- endfor %}
+        </ul>
+        <p class="sheet__dim">Paid content is always labeled. Usage rights, exclusivity and rush timelines are quoted separately.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="sheet__foot">
+    <span>{{ site.email }}</span>
+    <i aria-hidden="true"></i>
+    <span>youtube.com/@danunfinished</span>
+    <i aria-hidden="true"></i>
+    <span>instagram.com/the.dan.b</span>
+  </footer>
+  <p class="sheet__stamp">Updated {{ kit.updated | date: "%B %Y" }} &middot; Completely Human LLC</p>
+
+</main>
