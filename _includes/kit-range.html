@@ -1,0 +1,12 @@
+{%- comment -%}
+  Prints a channel's reporting window as "Oct 28 to Nov 25, 2026" from the
+  `from` and `to` dates in _data/mediakit.yml. Usage:
+  {% include kit-range.html kit=kit platform="YouTube" %}
+{%- endcomment -%}
+{%- for c in include.kit.channels -%}
+{%- if c.platform == include.platform -%}
+{%- assign from_year = c.from | date: "%Y" -%}
+{%- assign to_year = c.to | date: "%Y" -%}
+{%- if from_year == to_year -%}{{ c.from | date: "%b %-d" }} to {{ c.to | date: "%b %-d, %Y" }}{%- else -%}{{ c.from | date: "%b %-d, %Y" }} to {{ c.to | date: "%b %-d, %Y" }}{%- endif -%}
+{%- endif -%}
+{%- endfor -%}

@@ -23,7 +23,7 @@ noindex: true
       {%- if kit.highlights.size > 0 %}
       <ul class="kit__highlights" role="list">
         {%- for h in kit.highlights %}
-        <li><strong>{{ h.value }}</strong><span>{{ h.label }}</span></li>
+        <li><strong>{{ h.value }}</strong><span>{{ h.label }}{% if h.channel %}, {% include kit-range.html kit=kit platform=h.channel %}{% endif %}</span></li>
         {%- endfor %}
       </ul>
       {%- endif %}
@@ -50,7 +50,7 @@ noindex: true
         <li class="card card--channel">
           <span class="card__icon" aria-hidden="true">{% include icon.html name=ch.icon %}</span>
           <h3 class="card__title">{{ ch.platform }}</h3>
-          <p class="card__handle">{{ ch.handle }}{% if ch.period %} &middot; {{ ch.period }}{% endif %}</p>
+          <p class="card__handle">{{ ch.handle }} &middot; {% include kit-range.html kit=kit platform=ch.platform %}</p>
           <dl class="metrics">
             {%- for s in ch.stats %}
             <div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
@@ -71,7 +71,7 @@ noindex: true
           {%- for a in kit.audience %}{% if a.channel == ch.platform %}
           <div class="kit__audience">
             <h4>Audience</h4>
-            <p class="panel__sub">{{ a.period }}</p>
+            <p class="panel__sub">{{ a.kind }}, {% include kit-range.html kit=kit platform=a.channel %}.{% if a.note %} {{ a.note }}{% endif %}</p>
             <dl class="kit__rows">
               {%- for r in a.rows %}{% unless r.extra %}
               <div><dt>{{ r.label }}</dt><dd>{{ r.value }}</dd></div>

@@ -29,7 +29,7 @@ noindex: true
       {%- if kit.highlights.size > 0 %}
       <ul class="kit__highlights" role="list">
         {%- for h in kit.highlights %}
-        <li><strong>{{ h.value }}</strong><span>{{ h.label }}</span></li>
+        <li><strong>{{ h.value }}</strong><span>{{ h.label }}{% if h.channel %}, {% include kit-range.html kit=kit platform=h.channel %}{% endif %}</span></li>
         {%- endfor %}
       </ul>
       {%- endif %}

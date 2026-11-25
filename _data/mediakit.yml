@@ -4,9 +4,15 @@
 #
 # Monthly update (about 10 minutes):
 #   1. Open YouTube Studio (Media Kit tab, last 28 days) and Instagram
-#      Insights (Professional dashboard, last 30 days).
+#      Insights (Professional dashboard, last 30 days). Note the day you
+#      pull them.
 #   2. Update the numbers below. Round them: 4.2K, not 4,187.
-#   3. Change `updated` to today's date.
+#   3. Change `updated` to today's date, and set each channel's `from` and
+#      `to`: `to` is the day you pulled the numbers, `from` is 28 days
+#      earlier for YouTube and 30 days earlier for Instagram. The page shows
+#      them as a date range, like "Oct 28 to Nov 25, 2026".
+#   Exception: subscribers (YouTube) and followers (Instagram) are the real
+#   running total on the day you pull, not a 28 or 30 day figure.
 #   4. Commit and push. The "Updated" stamp on the page follows.
 #
 # Numbers last taken from YouTube Studio (28 days) and Instagram (30 days)
@@ -40,24 +46,30 @@ bio: >-
 
 # Three big numbers at the top of the page and on /content-creation/.
 highlights:
+  # `channel` appends that channel's date range to the label.
   - value: 708K
-    label: YouTube views, last 28 days
+    channel: YouTube
+    label: YouTube views
   - value: 279K
-    label: Instagram views, last 30 days
+    channel: Instagram
+    label: Instagram views
   - value: 35 to 54
     label: About 70% of YouTube viewers and 75% of Instagram followers
 
-# One card per channel. `topics` show as tags on the card. Leave url blank until the link is confirmed (the
-# card then shows no link). Exactly three stats per card keeps the grid tidy.
+# One card per channel. `topics` show as tags on the card. Leave url blank
+# until the link is confirmed (the card then shows no link). Exactly three
+# stats per card keeps the grid tidy. `from` and `to` are the reporting
+# window for every number except the total subscriber and follower counts.
 channels:
   - platform: YouTube
     handle: Dan Unfinished
     icon: youtube
     url: "https://www.youtube.com/@danunfinished"
-    period: Last 28 days
+    from: 2026-10-28
+    to: 2026-11-25
     stats:
-      - label: Subscribers
-        value: 3.5K
+      - label: Total subscribers
+        value: 3.6K
       - label: Views
         value: 708K
       - label: Watch hours
@@ -83,9 +95,10 @@ channels:
     handle: "@the.dan.b"
     icon: instagram
     url: "https://www.instagram.com/the.dan.b/"
-    period: Last 30 days
+    from: 2026-10-26
+    to: 2026-11-25
     stats:
-      - label: Followers
+      - label: Total followers
         value: 528
       - label: Views
         value: 279K
@@ -111,7 +124,7 @@ channels:
 # instead of inside them, which keeps the two cards about the same height.
 audience:
   - channel: YouTube
-    period: Viewers, last 28 days
+    kind: Viewers
     rows:
       - label: Age
         value: 35 to 44 (38%), 45 to 54 (32%), 25 to 34 (13%), 55 to 64 (12%)
@@ -130,7 +143,8 @@ audience:
         value: Retirement planning, real estate
 
   - channel: Instagram
-    period: Followers, last 30 days. Most views come from non-followers.
+    kind: Followers
+    note: Most views come from non-followers.
     rows:
       - label: Age
         value: 35 to 44 (43%), 45 to 54 (32%), 25 to 34 (13%), 55 to 64 (8%)

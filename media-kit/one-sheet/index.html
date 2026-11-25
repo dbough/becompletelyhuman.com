@@ -35,7 +35,7 @@ body_class: onesheet
       {%- for ch in kit.channels %}
       <div class="sheet__channel">
         <p class="sheet__channel-name">{{ ch.platform }} <span>{{ ch.handle }}</span></p>
-        <p class="sheet__period">{{ ch.period }}</p>
+        <p class="sheet__period">{% include kit-range.html kit=kit platform=ch.platform %}</p>
         <ul class="sheet__stats" role="list">
           {%- for s in ch.stats %}
           <li><strong>{{ s.value }}</strong><span>{{ s.label }}</span></li>
