@@ -155,6 +155,18 @@
     var thanksView = document.querySelector(".contact [data-thanks-view]");
     var btn = form.querySelector("button[type=submit]");
 
+    /* Links from other pages can preselect the topic: /?topic=Content+Creation#contact */
+    var topic = new URLSearchParams(window.location.search).get("topic");
+    var select = form.querySelector("#c-topic");
+    if (topic && select) {
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.toLowerCase() === topic.toLowerCase()) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       status.textContent = "";
