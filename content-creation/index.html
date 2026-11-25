@@ -90,12 +90,36 @@ noindex: true
       <header class="section__header">
         <p class="eyebrow">What it's about</p>
         <h2 id="themes-title">Work, change, tech, and a few jokes.</h2>
+        <p>Two channels, two speeds. YouTube is the long, honest version. Instagram is the short, funny one. Same guy on both.</p>
       </header>
-      <ul class="tags">
-        {%- for theme in kit.themes %}
-        <li>{{ theme }}</li>
-        {%- endfor %}
-      </ul>
+
+      <div class="split split--wide">
+        <div class="panel topic">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name="youtube" %}</span>
+          <h3>Dan Unfinished</h3>
+          <p class="panel__sub">YouTube. The long version.</p>
+          <ul class="ticks ticks--dot">
+            <li>Getting fired at 48, and what came after</li>
+            <li>How AI is changing tech work right now</li>
+            <li>The tech industry and engineering management, from the inside</li>
+            <li>Rebuilding work and identity in the middle of a career</li>
+          </ul>
+          <a class="card__link" href="https://www.youtube.com/@danunfinished">Watch on YouTube<span class="card__arrow" aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="panel topic">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name="instagram" %}</span>
+          <h3>@the.dan.b</h3>
+          <p class="panel__sub">Instagram Reels. The short version.</p>
+          <ul class="ticks ticks--dot">
+            <li>ADHD in everyday life, from meds wearing off to the grocery store</li>
+            <li>Being middle aged</li>
+            <li>Faith, including reading the Bible with ADHD</li>
+            <li>Laughing at all of it, with a little inspiration mixed in</li>
+          </ul>
+          <a class="card__link" href="https://www.instagram.com/the.dan.b/">Watch on Instagram<span class="card__arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </div>
   </section>
 

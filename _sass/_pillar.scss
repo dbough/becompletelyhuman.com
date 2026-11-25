@@ -460,3 +460,22 @@
   flex-grow: 0;
   margin-bottom: 1rem;
 }
+
+// Content Creation: one panel per channel in "What it's about".
+.pillar .topic {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar .topic h3 {
+  margin-bottom: 0.25rem;
+}
+
+.pillar .topic .panel__sub {
+  margin: 0 0 1.25rem;
+}
+
+.pillar .topic .ticks {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
