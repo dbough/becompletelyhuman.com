@@ -184,6 +184,12 @@
   font-size: 0.95rem;
 }
 
+// The address line right after a button (pillar page CTAs) gets the same gap
+// the homepage form has, where the empty status line adds it.
+.contact .btn + .contact__address {
+  margin-top: 2rem;
+}
+
 .contact__address span {
   color: var(--heading);
   font-weight: 600;
