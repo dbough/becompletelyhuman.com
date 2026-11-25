@@ -41,13 +41,13 @@ noindex: true
   <section class="section" aria-labelledby="channels-title">
     <div class="container">
       <header class="section__header">
-        <p class="eyebrow">Channels</p>
-        <h2 id="channels-title">Where the audience is.</h2>
+        <p class="eyebrow">Channels and audience</p>
+        <h2 id="channels-title">Where the audience is, and who's watching.</h2>
       </header>
 
-      <ul class="card-grid" role="list">
+      <ul class="card-grid card-grid--two" role="list">
         {%- for ch in kit.channels %}
-        <li class="card">
+        <li class="card card--channel">
           <span class="card__icon" aria-hidden="true">{% include icon.html name=ch.icon %}</span>
           <h3 class="card__title">{{ ch.platform }}</h3>
           <p class="card__handle">{{ ch.handle }}{% if ch.period %} &middot; {{ ch.period }}{% endif %}</p>
@@ -60,6 +60,17 @@ noindex: true
           {%- if ch.context %}
           <p class="card__text">{{ ch.context }}</p>
           {%- endif %}
+          {%- for a in kit.audience %}{% if a.channel == ch.platform %}
+          <div class="kit__audience">
+            <h4>Who's watching</h4>
+            <p class="panel__sub">{{ a.period }}</p>
+            <dl class="kit__rows">
+              {%- for r in a.rows %}
+              <div><dt>{{ r.label }}</dt><dd>{{ r.value }}</dd></div>
+              {%- endfor %}
+            </dl>
+          </div>
+          {%- endif %}{% endfor %}
           {%- if ch.url and ch.url != "" %}
           <a class="card__link" href="{{ ch.url }}">Visit the channel<span class="card__arrow" aria-hidden="true">↗</span></a>
           {%- endif %}
@@ -69,29 +80,7 @@ noindex: true
     </div>
   </section>
 
-  <section class="section section--band" aria-labelledby="audience-title">
-    <div class="container">
-      <header class="section__header">
-        <p class="eyebrow">Audience</p>
-        <h2 id="audience-title">Who's watching.</h2>
-      </header>
-      <div class="split split--wide">
-        {%- for a in kit.audience %}
-        <div class="panel">
-          <h3>{{ a.channel }}</h3>
-          <p class="panel__sub">{{ a.period }}</p>
-          <dl class="kit__rows">
-            {%- for r in a.rows %}
-            <div><dt>{{ r.label }}</dt><dd>{{ r.value }}</dd></div>
-            {%- endfor %}
-          </dl>
-        </div>
-        {%- endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="themes-title">
+  <section class="section section--band" aria-labelledby="themes-title">
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">What we make</p>
@@ -105,7 +94,7 @@ noindex: true
     </div>
   </section>
 
-  <section class="section section--band" aria-labelledby="offers-title">
+  <section class="section" aria-labelledby="offers-title">
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">Ways to work together</p>
@@ -129,7 +118,7 @@ noindex: true
   </section>
 
   {%- if kit.samples.size > 0 %}
-  <section class="section" aria-labelledby="samples-title">
+  <section class="section section--band" aria-labelledby="samples-title">
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">Sample work</p>
