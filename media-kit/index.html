@@ -10,15 +10,16 @@ noindex: true
 {%- assign kit = site.data.mediakit -%}
 <div class="pillar">
 
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero__inner">
-      <p class="eyebrow">Media kit</p>
-      <p class="kit__stamp">Updated {{ kit.updated | date: "%B %Y" }}</p>
+  <section class="hero hero--kit" aria-labelledby="hero-title">
+    <div class="container hero__inner kit__intro">
       <img class="kit__photo" src="{{ '/assets/img/dan-headshot.jpg' | relative_url }}" alt="{{ kit.name }}" width="640" height="640">
-      <h1 id="hero-title" class="hero__title">{{ kit.name }}</h1>
-      <p class="hero__lede">{{ kit.tagline }}</p>
-      <p class="hero__lede">{{ kit.bio }}</p>
-      <p class="kit__download no-print"><a href="{{ '/assets/Dan-Bough-Media-Kit.pdf' | relative_url }}" download>Download the one-page PDF</a></p>
+      <div class="kit__intro-text">
+        <p class="eyebrow">Media kit <span class="kit__stamp">Updated {{ kit.updated | date: "%B %Y" }}</span></p>
+        <h1 id="hero-title" class="hero__title">{{ kit.name }}</h1>
+        <p class="hero__lede hero__lede--tagline">{{ kit.tagline }}</p>
+        <p class="hero__lede">{{ kit.bio }}</p>
+        <p class="kit__download no-print"><a href="{{ '/assets/Dan-Bough-Media-Kit.pdf' | relative_url }}" download>Download the one-page PDF</a></p>
+      </div>
       {%- if kit.highlights.size > 0 %}
       <ul class="kit__highlights" role="list">
         {%- for h in kit.highlights %}
