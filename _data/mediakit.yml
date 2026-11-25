@@ -33,16 +33,23 @@
 
 updated: 2026-11-25
 
-# Third person, a few short sentences. This is the first thing a brand reads.
+# First person, a few short sentences. This is the first thing a brand reads.
+# `bio_short` is the version on the one-page PDF.
 name: Dan Bough
-tagline: A guy redesigning the next chapter of his life, out loud.
+tagline: It's okay to be unfinished.
 bio: >-
-  Dan Bough spent more than twenty years in tech, from support and networks
-  to software and engineering leadership. After losing his engineering
-  manager job at 48, he started making videos about what comes next. On
-  YouTube, that's career setbacks, the tech industry, and rebuilding. On
-  Instagram, it's short, funny takes on middle age, ADHD, and faith.
-  Honest, a little messy, and funny when it fits.
+  I'm Dan. After twenty-plus years in tech, from support and networks to
+  software and engineering leadership, my career got turned upside down at
+  48. Now I'm figuring out what comes next, out loud. On YouTube that's
+  long, honest videos about the setbacks, the tech industry, and starting
+  over. On Instagram it's short, funny takes on middle age, ADHD, and
+  faith. One human talking to another.
+bio_short: >-
+  I'm Dan. After twenty-plus years in tech, my career got turned upside
+  down at 48, and now I'm figuring out what comes next, out loud. YouTube
+  is long, honest videos about the setbacks, the tech industry, and
+  starting over. Instagram is short, funny takes on middle age, ADHD, and
+  faith. One human talking to another.
 
 # Three big numbers at the top of the page and on /content-creation/.
 highlights:
@@ -76,7 +83,7 @@ channels:
         value: 20.6K
     note: >-
       Honest, long-form videos about career setbacks, the tech industry, and
-      rebuilding after mid-career disruption. People watch about 4 minutes
+      starting over after a career gets turned upside down. People watch about 4 minutes
       of each video on average, around a third of it.
     context: >-
       Most of the recent views come from two videos that took off (listed
@@ -161,7 +168,7 @@ offers:
   - title: Mid-roll sponsor spot
     icon: video
     price: $500
-    text: A 60 to 90 second spot in the middle of a Dan Unfinished video, in Dan's own words and clearly labeled as sponsored.
+    text: A 60 to 90 second spot in the middle of a Dan Unfinished video, in my own words and clearly labeled as sponsored.
   - title: Dedicated video
     icon: camera
     price: $1,000
@@ -206,15 +213,15 @@ samples:
 partners: []
 
 fit_yes:
-  - Products and services we'd actually use
+  - Products and services I'd actually use
   - Career, job search, and professional growth
   - Tech, AI, and productivity tools
   - Tools that help with focus, planning, and ADHD
   - Faith-friendly brands
-  - Honest reviews, including what we didn't love
+  - Honest reviews, including what I didn't love
   - Brands happy to let a real person say it their own way
 fit_no:
-  - Anything we haven't tried or wouldn't recommend
+  - Anything I haven't tried or wouldn't recommend
   - Scripts to read word for word
   - Hidden sponsorships. Paid content is always labeled
   - Gambling, get-rich-quick offers and similar
@@ -223,12 +230,12 @@ process:
   - title: Say hello
     text: Email a short brief or just the idea. No formal pitch needed.
   - title: Fit check
-    text: We try the product and tell you honestly whether it's a fit.
+    text: I try the product and tell you honestly whether it's a fit.
   - title: Agree on the details
     text: Format, usage rights, price and timing, in writing before any work starts.
   - title: Outline and review
-    text: We share the key points for your approval. They're talking points, not a script.
+    text: I share the key points for your approval. They're talking points, not a script.
   - title: Make it, post it, report back
-    text: You see a draft first. After it goes live, we send the results.
+    text: You see a draft first. After it goes live, I send the results.
 
 contact_subject: Partnership inquiry

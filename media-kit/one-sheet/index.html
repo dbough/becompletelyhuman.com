@@ -26,7 +26,7 @@ body_class: onesheet
 
   <section class="sheet__about" aria-labelledby="s-about">
     <h2 id="s-about" class="sheet__tag">About</h2>
-    <p>{{ kit.bio }}</p>
+    <p>{{ kit.bio_short | default: kit.bio }}</p>
   </section>
 
   <section class="sheet__box" aria-labelledby="s-perf">

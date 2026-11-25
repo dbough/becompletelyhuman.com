@@ -25,7 +25,8 @@ Jekyll 4 site on GitHub Pages (deployed by `.github/workflows/pages.yml`). Full 
 ## Voice
 - Plain, direct, a little messy, human. No marketing buzzwords, no overselling, never em dashes.
 - Three pillars, in this order: Coaching (life coaching, grow as a person), Tech Consulting (save time and money, including with AI), Content Creation (reach an audience, work with brands). Hero: "Success should be completely human." Core idea: embrace the messy middle; being completely human is how the work gets done. No imposter-syndrome language.
-- Pronouns: "we" for what the company does for customers; "I" only in Dan's own story (the Why section, with his headshot) and the contact intro.
+- Pronouns: "we" for what the company does for customers (homepage, Coaching, Tech Consulting). "I" in Dan's own story (the Why section, with his headshot), the contact intro, and, since 2026-11-25, on /content-creation/ and /media-kit/ and the one-page PDF, where a brand is partnering with Dan the person. Dan said to pick a direction and pivot later, so this is easy to flip back.
+- Dan's own words for these surfaces (from his YouTube About and Substack): "a guy in the middle of figuring out what comes next after my career got turned upside down", "one human talking to another", "It's okay to be unfinished." Say "career got turned upside down" (not "fired", "laid off" or "mid-career disruption"). Do not say "funny when it fits"; Instagram is the funny channel, YouTube and Substack are earnest.
 - Projects in development are stealth: never name them on the site. Describe work by category. (ReviewChaser is the one named exception, below.)
 - Company-first, but Dan's energy comes through.
 
