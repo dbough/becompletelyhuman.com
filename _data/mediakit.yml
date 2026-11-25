@@ -24,15 +24,16 @@
 
 updated: 2026-11-25
 
-# Third person, two or three sentences. This is the first thing a brand reads.
+# Third person, a few short sentences. This is the first thing a brand reads.
 name: Dan Bough
 tagline: A guy redesigning the next chapter of his life, out loud.
 bio: >-
   Dan Bough spent more than twenty years in tech, from support and networks
-  to software and engineering leadership. After a mid-career setback, he
-  started making videos about what comes next: the realities of the tech
-  industry, rebuilding work and identity, and being middle aged with ADHD
-  and faith. Honest, a little messy, and funny when it fits.
+  to software and engineering leadership. After losing his engineering
+  manager job at 48, he started making videos about what comes next. On
+  YouTube, that's career setbacks, the tech industry, and rebuilding. On
+  Instagram, it's short, funny takes on middle age, ADHD, and faith.
+  Honest, a little messy, and funny when it fits.
 
 # Three big numbers at the top of the page and on /content-creation/.
 highlights:
@@ -40,8 +41,8 @@ highlights:
     label: YouTube views, last 28 days
   - value: 279K
     label: Instagram views, last 30 days
-  - value: About 70%
-    label: of viewers are 35 to 54, on both channels
+  - value: 35 to 54
+    label: About 70% of YouTube viewers and 75% of Instagram followers
 
 # One card per channel. Leave url blank until the link is confirmed (the
 # card then shows no link). Exactly three stats per card keeps the grid tidy.
@@ -49,14 +50,14 @@ channels:
   - platform: YouTube
     handle: Dan Unfinished
     icon: video
-    url: ""
+    url: "https://www.youtube.com/@danunfinished"
     period: Last 28 days
     stats:
       - label: Subscribers
         value: 3.5K
       - label: Views
         value: 708K
-      - label: Hours watched
+      - label: Watch hours
         value: 20.6K
     note: >-
       Honest, long-form videos about career setbacks, the tech industry, and
@@ -64,7 +65,7 @@ channels:
       of each video on average, around a third of it.
     context: >-
       Most of the recent views come from two videos that took off (listed
-      below). 19 videos so far, and the channel is still young.
+      below). 19 videos so far.
 
   - platform: Instagram
     handle: "@the.dan.b"
@@ -83,14 +84,14 @@ channels:
       ADHD, and faith. Nearly all views are Reels. They're also posted to
       TikTok at the same handle.
     context: >-
-      A small account that's growing fast, up from about 210 followers a
+      A small account that's growing fast, up from about 215 followers a
       month ago. 96% of views come from people who don't follow yet.
 
 # From each platform's audience analytics. Brands care about this more
 # than follower counts. Percentages are rounded to whole numbers.
 audience:
   - channel: YouTube
-    period: Last 28 days
+    period: Viewers, last 28 days
     rows:
       - label: Age
         value: 35 to 44 (38%), 45 to 54 (32%), 25 to 34 (13%), 55 to 64 (12%)
@@ -101,10 +102,12 @@ audience:
       - label: Household income
         value: 63% in the top 10% of household incomes, per YouTube's estimates
       - label: Interests
-        value: Business news, investing, retirement planning
+        value: Online banking, car buying, value shopping, business news, investing
+      - label: Shopping for
+        value: Retirement planning, real estate
 
   - channel: Instagram
-    period: Last 30 days
+    period: Followers, last 30 days. Most views come from non-followers.
     rows:
       - label: Age
         value: 35 to 44 (43%), 45 to 54 (32%), 25 to 34 (13%), 55 to 64 (8%)
@@ -175,10 +178,11 @@ samples:
 partners: []
 
 fit_yes:
-  - Products and services Dan would use himself
+  - Products and services we'd actually use
   - Career, job search, and professional growth
   - Tech, AI, and productivity tools
-  - ADHD-friendly tools, and faith-friendly brands
+  - Tools that help with focus, planning, and ADHD
+  - Faith-friendly brands
   - Honest reviews, including what we didn't love
   - Brands happy to let a real person say it their own way
 fit_no:
