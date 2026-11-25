@@ -680,3 +680,18 @@
 .pillar .card--channel .card__link {
   margin-top: auto;
 }
+
+// Channel cards keep their own height so neither one carries empty space.
+.pillar .card-grid--top {
+  align-items: flex-start;
+}
+
+.pillar .tags--left {
+  justify-content: flex-start;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.pillar .tags--left li {
+  background: var(--bg);
+  font-size: 0.85rem;
+}

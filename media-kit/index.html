@@ -42,10 +42,10 @@ noindex: true
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">Channels and audience</p>
-        <h2 id="channels-title">Where the audience is, and who's watching.</h2>
+        <h2 id="channels-title">Who's watching.</h2>
       </header>
 
-      <ul class="card-grid card-grid--two" role="list">
+      <ul class="card-grid card-grid--two card-grid--top" role="list">
         {%- for ch in kit.channels %}
         <li class="card card--channel">
           <span class="card__icon" aria-hidden="true">{% include icon.html name=ch.icon %}</span>
@@ -60,9 +60,16 @@ noindex: true
           {%- if ch.context %}
           <p class="card__text">{{ ch.context }}</p>
           {%- endif %}
+          {%- if ch.topics.size > 0 %}
+          <ul class="tags tags--left" aria-label="Topics">
+            {%- for t in ch.topics %}
+            <li>{{ t }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
           {%- for a in kit.audience %}{% if a.channel == ch.platform %}
           <div class="kit__audience">
-            <h4>Who's watching</h4>
+            <h4>Audience</h4>
             <p class="panel__sub">{{ a.period }}</p>
             <dl class="kit__rows">
               {%- for r in a.rows %}
@@ -80,21 +87,7 @@ noindex: true
     </div>
   </section>
 
-  <section class="section section--band" aria-labelledby="themes-title">
-    <div class="container">
-      <header class="section__header">
-        <p class="eyebrow">What we make</p>
-        <h2 id="themes-title">Topics the audience comes for.</h2>
-      </header>
-      <ul class="tags">
-        {%- for theme in kit.themes %}
-        <li>{{ theme }}</li>
-        {%- endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="offers-title">
+  <section class="section section--band" aria-labelledby="offers-title">
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">Ways to work together</p>
@@ -118,7 +111,7 @@ noindex: true
   </section>
 
   {%- if kit.samples.size > 0 %}
-  <section class="section section--band" aria-labelledby="samples-title">
+  <section class="section" aria-labelledby="samples-title">
     <div class="container">
       <header class="section__header">
         <p class="eyebrow">Sample work</p>

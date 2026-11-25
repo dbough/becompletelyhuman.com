@@ -47,7 +47,7 @@ highlights:
   - value: 35 to 54
     label: About 70% of YouTube viewers and 75% of Instagram followers
 
-# One card per channel. Leave url blank until the link is confirmed (the
+# One card per channel. `topics` show as tags on the card. Leave url blank until the link is confirmed (the
 # card then shows no link). Exactly three stats per card keeps the grid tidy.
 channels:
   - platform: YouTube
@@ -69,6 +69,10 @@ channels:
     context: >-
       Most of the recent views come from two videos that took off (listed
       below). 19 videos so far.
+    topics:
+      - Career setbacks and rebuilding
+      - Tech and AI
+      - Engineering management
 
   - platform: Instagram
     handle: "@the.dan.b"
@@ -89,6 +93,11 @@ channels:
     context: >-
       A small account that's growing fast, up from about 215 followers a
       month ago. 96% of views come from people who don't follow yet.
+    topics:
+      - Middle age
+      - ADHD
+      - Faith
+      - Humor
 
 # From each platform's audience analytics. Brands care about this more
 # than follower counts. Percentages are rounded to whole numbers.
@@ -120,15 +129,6 @@ audience:
         value: United States 62%, United Kingdom 7%, Australia 5%, Canada 5%
       - label: Language
         value: 92% English
-
-themes:
-  - Career setbacks and rebuilding
-  - Tech and AI
-  - Engineering management
-  - Middle age
-  - ADHD
-  - Faith
-  - Humor
 
 # Formats and rates. Price is text so "$1,000" and "Quoted per project" both
 # work. Titles stay short: they also show as tags on /content-creation/.
