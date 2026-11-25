@@ -479,3 +479,37 @@
   flex-grow: 1;
   margin-bottom: 1.5rem;
 }
+
+// Content Creation "For brands": three short promises under the offers.
+.pillar .promises {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+@media (min-width: 720px) {
+  .pillar .promises {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar .promises li {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.pillar .promises strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--heading);
+}
+
+.pillar .promises + .hero__actions {
+  margin-top: 2.5rem;
+}

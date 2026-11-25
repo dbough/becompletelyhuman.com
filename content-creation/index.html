@@ -128,15 +128,28 @@ noindex: true
       <header class="section__header">
         <p class="eyebrow">For brands</p>
         <h2 id="brands-title">Want to reach this audience?</h2>
-        <p>Most of the audience is 35 to 54, and the US is the biggest market on both channels. Here are the ways we can work together. The media kit has the numbers, rates, and how a project goes.</p>
+        <p>Most of the audience is 35 to 54, and the US is the biggest market on both channels. If that's who you want to reach, here's how we can work together.</p>
       </header>
-      <ul class="tags">
+
+      <ul class="card-grid card-grid--two" role="list">
         {%- for o in kit.offers %}
-        <li>{{ o.title }}</li>
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name=o.icon %}</span>
+          <h3 class="card__title">{{ o.title }}</h3>
+          <p class="card__price">{{ o.price }}</p>
+          <p class="card__text">{{ o.text }}</p>
+        </li>
         {%- endfor %}
       </ul>
+
+      <ul class="promises" role="list">
+        <li><strong>Our own words.</strong> Talking points, not a script.</li>
+        <li><strong>Always labeled.</strong> Paid content says it's paid.</li>
+        <li><strong>Honest fit check.</strong> If it's not a fit, we'll say so.</li>
+      </ul>
+
       <div class="hero__actions">
-        <a class="btn btn--primary" href="/media-kit/">See the media kit</a>
+        <a class="btn btn--primary" href="/media-kit/">See the full media kit</a>
       </div>
     </div>
   </section>
