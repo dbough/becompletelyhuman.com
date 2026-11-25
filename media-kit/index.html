@@ -105,8 +105,8 @@ noindex: true
   <section class="section section--band" aria-labelledby="offers-title">
     <div class="container">
       <header class="section__header">
-        <p class="eyebrow">Ways to work together</p>
-        <h2 id="offers-title">Formats and rates.</h2>
+        <p class="eyebrow">Formats</p>
+        <h2 id="offers-title">Ways to partner.</h2>
       </header>
 
       <ul class="card-grid card-grid--two" role="list">
@@ -114,14 +114,11 @@ noindex: true
         <li class="card">
           <span class="card__icon" aria-hidden="true">{% include icon.html name=o.icon %}</span>
           <h3 class="card__title">{{ o.title }}</h3>
-          <p class="card__price">{{ o.price }}</p>
           <p class="card__text">{{ o.text }}</p>
         </li>
         {%- endfor %}
       </ul>
-      {%- if kit.rates_note %}
-      <p class="note">{{ kit.rates_note }}</p>
-      {%- endif %}
+      <p class="note">Rates are in the one-page PDF above, or just ask.</p>
     </div>
   </section>
 
