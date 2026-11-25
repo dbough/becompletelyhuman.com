@@ -33,7 +33,7 @@
         <p class="card__text">{{ item.description }}</p>
         {%- if item.link and item.link != "" %}
         <a class="card__link" href="{{ item.link }}">
-          {{ item.link_label | default: "Learn more" }}<span class="card__arrow" aria-hidden="true">↗</span>
+          {{ item.link_label | default: "Learn more" }}<span class="card__arrow" aria-hidden="true">{% if item.link contains "://" %}↗{% else %}→{% endif %}</span>
         </a>
         {%- else %}
         <a class="card__link card__link--quiet" href="#contact">

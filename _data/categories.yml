@@ -6,7 +6,7 @@
 #   icon         Name of a line icon in _includes/icon.html (heart-handshake,
 #                laptop, compass, sprout, wrench, video, mail). Decorative, hidden from screen readers.
 #   description  One to three short sentences
-#   link         Optional. Full URL to another site. Leave blank and the
+#   link         Optional. Full URL or a site path like /coaching/. Leave blank and the
 #                card points to the contact section instead.
 #   link_label   Optional. Button text when there's a link.
 #
@@ -19,8 +19,8 @@
   description: >-
     Life coaching for anyone looking to grow. We'll partner with you, be your
     biggest supporter and fan, and help you get where you want to go.
-  link:
-  link_label:
+  link: /coaching/
+  link_label: Learn more
 
 - name: Tech Consulting
   icon: laptop
@@ -29,8 +29,8 @@
     engineering leadership, put to work for you and your business. We help
     you save time and money with technology, including AI, and often with
     the tools you already use.
-  link:
-  link_label:
+  link: /tech-consulting/
+  link_label: Learn more
 
 - name: Content Creation
   icon: video
@@ -38,5 +38,5 @@
     Reach more people. Videos and short-form content for brands that want
     to get in front of the audience we're building. Made by a real person,
     mistakes included.
-  link:
-  link_label:
+  link: /content-creation/
+  link_label: Learn more
