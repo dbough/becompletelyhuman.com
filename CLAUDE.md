@@ -41,6 +41,7 @@ Jekyll 4 site on GitHub Pages (deployed by `.github/workflows/pages.yml`). Full 
 - `_includes/header.html` now prefixes nav anchors with `/` on any page except the homepage, so "What we do / Why / Contact" work from subpages.
 - Media kit content lives only in `_data/mediakit.yml`. `draft: true` shows a banner and the numbers are TBD placeholders, never invented. Round numbers, update `updated` monthly, empty `samples` and `partners` lists hide their sections on the live page. The page prints to a one-page PDF (Save as PDF); no separate PDF to maintain.
 - New icons added to `_includes/icon.html`: camera, smartphone, megaphone, code, sparkles.
+- 2026-11-25: Coaching copy draws on completelyhumancoaching.com and Tech Consulting copy on getsimplyproductive.com (problems, examples, four-step process, "no commitment, no agenda"), kept short on purpose. Each page notes its own site as a home base; those two sites may stay the home base for those activities, so don't copy everything over.
 - Open with Dan: coaching copy leaves out the Co-Active method name, prices, and ICF status on purpose; tech consulting pricing and "ways to start" sizes, and the media kit brand-fit list, offers, and process, are drafts for him to edit. The coaching intro-call button points at calendly.com/completelyhumancoaching/30-minutes; confirm it's the right link.
 
 ## Working with Dan
