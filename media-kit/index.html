@@ -194,24 +194,6 @@ permalink: /media-kit/
     </div>
   </section>
 
-  <section class="section section--band" aria-labelledby="process-title">
-    <div class="container">
-      <header class="section__header">
-        <p class="eyebrow">How it works</p>
-        <h2 id="process-title">From hello to live.</h2>
-      </header>
-
-      <ol class="steps">
-        {%- for step in kit.process %}
-        <li>
-          <h3>{{ step.title }}</h3>
-          <p>{{ step.text }}</p>
-        </li>
-        {%- endfor %}
-      </ol>
-    </div>
-  </section>
-
   {% include pillar-cta.html
      eyebrow="Work together"
      title="Let's work together."
