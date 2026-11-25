@@ -31,3 +31,17 @@
   --gutter: clamp(1.25rem, 4vw, 2rem);
   --section-space: clamp(4rem, 10vw, 7rem);
 }
+
+// Print / Save as PDF: flip to light surfaces so the page doesn't burn a
+// pile of ink. The accent is left alone (set by theme-vars.html).
+@media print {
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f4f1ee;
+    --border: #d9d3cc;
+    --heading: #121110;
+    --text: #3a3632;
+    --text-dim: #5c5650;
+  }
+}

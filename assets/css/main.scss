@@ -8,4 +8,6 @@
 @use "components";
 @use "sections";
 @use "solution"; // solution subpages, scoped under .solution
+@use "pillar"; // pillar pages and the media kit, scoped under .pillar
+@use "print"; // print and Save as PDF (the media kit)
 @use "switcher"; // draft-only: delete this line with the theme switcher

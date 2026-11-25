@@ -1,0 +1,60 @@
+// Print and "Save as PDF". The media kit is built to print as a clean
+// one-pager, so there's never a separate PDF to keep up to date.
+// Light surfaces come from the tokens (see the print block in _tokens.scss).
+
+@media print {
+  .skip-link,
+  .site-header,
+  .site-footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    font-size: 0.95rem;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .section,
+  .pillar .hero {
+    padding-block: 1.5rem;
+  }
+
+  .section--band {
+    border: 0;
+  }
+
+  .card,
+  .panel,
+  .steps li,
+  .facts div,
+  .sample-list li {
+    break-inside: avoid;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card__icon,
+  .steps li::before {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  // Ember text is hard to read on white paper, so headings do the talking.
+  .eyebrow,
+  a {
+    color: var(--heading);
+  }
+
+  .contact {
+    background: none;
+    border-color: var(--border);
+  }
+}

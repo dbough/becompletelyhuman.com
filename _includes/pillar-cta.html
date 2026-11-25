@@ -1,0 +1,16 @@
+{%- comment -%}
+  Closing call to action for pillar pages. Reuses the homepage .contact box.
+  Params: eyebrow, title, text, button_label, button_href, alt_text, email_subject.
+  Pass literal paths for button_href ("/#contact", "/media-kit/") or a full URL.
+{%- endcomment -%}
+<section class="section no-print" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="contact">
+      <p class="eyebrow">{{ include.eyebrow | default: "Next step" }}</p>
+      <h2 id="cta-title">{{ include.title }}</h2>
+      <p>{{ include.text }}</p>
+      <a class="btn btn--primary btn--large" href="{{ include.button_href }}">{{ include.button_label }}</a>
+      <p class="contact__address">{{ include.alt_text | default: "Prefer email?" }} <a href="mailto:{{ site.email }}?subject={{ include.email_subject | uri_escape }}">{{ site.email }}</a></p>
+    </div>
+  </div>
+</section>

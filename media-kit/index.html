@@ -1,0 +1,217 @@
+---
+layout: default
+title: Media Kit
+description: >-
+  Media kit for Dan Bough and Completely Human: channels, audience, formats,
+  and how working together goes. Updated regularly.
+permalink: /media-kit/
+noindex: true
+---
+{%- assign kit = site.data.mediakit -%}
+<div class="pillar">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <p class="eyebrow">Media kit</p>
+      <p class="kit__stamp">Updated {{ kit.updated | date: "%B %Y" }}</p>
+      <img class="kit__photo" src="{{ '/assets/img/dan-headshot.jpg' | relative_url }}" alt="{{ kit.name }}" width="640" height="640">
+      <h1 id="hero-title" class="hero__title">{{ kit.name }}</h1>
+      <p class="hero__lede">{{ kit.tagline }}</p>
+      <p class="hero__lede">{{ kit.bio }}</p>
+    </div>
+  </section>
+
+  {%- if kit.draft %}
+  <div class="container no-print">
+    <div class="kit__draft" role="note">
+      <p><strong>Draft.</strong> Every TBD is a placeholder until real analytics go in. Edit <code>_data/mediakit.yml</code> and delete the <code>draft</code> line when it's ready.</p>
+    </div>
+  </div>
+  {%- endif %}
+
+  <section class="section" aria-labelledby="channels-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Channels</p>
+        <h2 id="channels-title">Where the audience is.</h2>
+      </header>
+
+      <ul class="card-grid" role="list">
+        {%- for ch in kit.channels %}
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name=ch.icon %}</span>
+          <h3 class="card__title">{{ ch.platform }}</h3>
+          <p class="card__handle">{{ ch.handle }}</p>
+          <dl class="metrics">
+            <div><dt>Followers</dt><dd>{{ ch.followers }}</dd></div>
+            <div><dt>Avg views</dt><dd>{{ ch.avg_views }}</dd></div>
+            <div><dt>Engaged</dt><dd>{{ ch.engagement }}</dd></div>
+          </dl>
+          <p class="card__text">{{ ch.note }}</p>
+          {%- if ch.url and ch.url != "" %}
+          <a class="card__link" href="{{ ch.url }}">Visit the channel<span class="card__arrow" aria-hidden="true">↗</span></a>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--band" aria-labelledby="audience-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Audience</p>
+        <h2 id="audience-title">Who's watching.</h2>
+      </header>
+      <dl class="facts">
+        {%- for a in kit.audience %}
+        <div><dt>{{ a.label }}</dt><dd>{{ a.value }}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="themes-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">What we make</p>
+        <h2 id="themes-title">Topics the audience comes for.</h2>
+      </header>
+      <ul class="tags">
+        {%- for theme in kit.themes %}
+        <li>{{ theme }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--band" aria-labelledby="offers-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Ways to work together</p>
+        <h2 id="offers-title">Formats.</h2>
+      </header>
+
+      <ul class="card-grid" role="list">
+        {%- for o in kit.offers %}
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name=o.icon %}</span>
+          <h3 class="card__title">{{ o.title }}</h3>
+          <p class="card__text">{{ o.text }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  {%- if kit.samples.size > 0 %}
+  <section class="section" aria-labelledby="samples-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Sample work</p>
+        <h2 id="samples-title">See how it looks.</h2>
+      </header>
+      <ul class="sample-list">
+        {%- for s in kit.samples %}
+        <li>
+          <h3><a href="{{ s.url }}">{{ s.title }}</a></h3>
+          <p>{{ s.platform }}{% if s.note %}. {{ s.note }}{% endif %}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+  {%- elsif kit.draft %}
+  <section class="section no-print" aria-labelledby="samples-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Sample work</p>
+        <h2 id="samples-title">Add three to five of your best pieces.</h2>
+        <p>Best performers, not newest. Add them under <code>samples</code> in the data file. This section stays hidden from the live page until there's something in it.</p>
+      </header>
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- if kit.partners.size > 0 %}
+  <section class="section section--band" aria-labelledby="partners-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Past partners</p>
+        <h2 id="partners-title">Brands we've worked with.</h2>
+      </header>
+      <ul class="partner-list">
+        {%- for p in kit.partners %}
+        <li>{{ p }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="section" aria-labelledby="fit-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Brand fit</p>
+        <h2 id="fit-title">What we will and won't promote.</h2>
+      </header>
+
+      <div class="split">
+        <div class="panel">
+          <h3>Yes</h3>
+          <ul class="ticks">
+            {%- for item in kit.fit_yes %}
+            <li>{{ item }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>No</h3>
+          <ul class="ticks ticks--no">
+            {%- for item in kit.fit_no %}
+            <li>{{ item }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--band" aria-labelledby="rates-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Rates</p>
+        <h2 id="rates-title">What it costs.</h2>
+        <p>{{ kit.rates }}</p>
+      </header>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="process-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">How it works</p>
+        <h2 id="process-title">From hello to live.</h2>
+      </header>
+
+      <ol class="steps">
+        {%- for step in kit.process %}
+        <li>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  {% include pillar-cta.html
+     eyebrow="Work together"
+     title="Let's work together."
+     text="Send a short note about what you have in mind. We'll reply with a fit check and next steps."
+     button_label="Email about a partnership"
+     button_href="mailto:hello@becompletelyhuman.com?subject=Partnership%20inquiry"
+     alt_text="Or reach us at"
+     email_subject=kit.contact_subject %}
+
+</div>

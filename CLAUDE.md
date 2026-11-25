@@ -35,5 +35,13 @@ Jekyll 4 site on GitHub Pages (deployed by `.github/workflows/pages.yml`). Full 
 - No nav items for utility pages. Google Analytics 4 is on (Dan approved 2026-11-21; ID in `_config.yml` as `google_analytics`, `_includes/analytics.html`, production builds only). No other analytics or trackers without asking.
 - `/reviewchaser/` solution page (Dan's call, 2026-11-20: named on purpose, an exception to the stealth rule). Uses `_layouts/bare.html` (shared head and tokens, no CH header/footer) with `body_class: solution`; styles live in `_sass/_solution.scss`, all scoped under `.solution`. Its "I'm interested" popup posts to Formspree form `mppdjpvz`. Not linked from the CH homepage or nav yet. Footer says "ReviewChaser is a Completely Human solution."
 
+## Pillar pages and media kit (drafted 2026-11-25, live but unlinked)
+- `/coaching/`, `/tech-consulting/`, `/content-creation/`, `/media-kit/`. Dan said to push them to production but NOT link to them yet. Until he says so: no links from the homepage cards, header nav, footer, or any other page, and each page carries `noindex: true` in front matter. When he says to launch, remove `noindex`, point the homepage cards (`link` in `_data/categories.yml`) at the pillar pages, and decide on nav.
+- Pages use `_layouts/default.html` with a `<div class="pillar">` wrapper. Styles are in `_sass/_pillar.scss` (scoped under `.pillar`); print styles in `_sass/_print.scss`, light print colors in `_sass/_tokens.scss`. Closing call to action is `_includes/pillar-cta.html`. Shared skeleton: hero, a story or "who it's for" section, a fit or "ways to start" section, then the CTA.
+- `_includes/header.html` now prefixes nav anchors with `/` on any page except the homepage, so "What we do / Why / Contact" work from subpages.
+- Media kit content lives only in `_data/mediakit.yml`. `draft: true` shows a banner and the numbers are TBD placeholders, never invented. Round numbers, update `updated` monthly, empty `samples` and `partners` lists hide their sections on the live page. The page prints to a one-page PDF (Save as PDF); no separate PDF to maintain.
+- New icons added to `_includes/icon.html`: camera, smartphone, megaphone, code, sparkles.
+- Open with Dan: coaching copy leaves out the Co-Active method name, prices, and ICF status on purpose; tech consulting pricing and "ways to start" sizes, and the media kit brand-fit list, offers, and process, are drafts for him to edit. The coaching intro-call button points at calendly.com/completelyhumancoaching/30-minutes; confirm it's the right link.
+
 ## Working with Dan
 Give a full draft to react to instead of asking many questions. He edits actively. Commit small, push to `main`, tell him what changed in a few plain sentences.

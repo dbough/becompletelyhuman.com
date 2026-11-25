@@ -1,3 +1,9 @@
+{%- comment -%}
+  On the homepage the nav jumps to sections on the same page. On any other
+  page it goes back to the homepage section instead.
+{%- endcomment -%}
+{%- assign nav_prefix = "" -%}
+{%- unless page.url == "/" -%}{%- assign nav_prefix = "/" -%}{%- endunless -%}
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, home">
@@ -6,9 +12,9 @@
     </a>
 
     <nav class="site-nav" aria-label="Main">
-      <a class="site-nav__link" href="#what">What we do</a>
-      <a class="site-nav__link" href="#why">Why</a>
-      <a class="btn btn--outline btn--small" href="#contact">Contact</a>
+      <a class="site-nav__link" href="{{ nav_prefix }}#what">What we do</a>
+      <a class="site-nav__link" href="{{ nav_prefix }}#why">Why</a>
+      <a class="btn btn--outline btn--small" href="{{ nav_prefix }}#contact">Contact</a>
     </nav>
   </div>
 </header>

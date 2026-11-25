@@ -1,0 +1,125 @@
+# ---------------------------------------------------------------
+# Media kit data. This is the ONLY file you edit to keep /media-kit/ current.
+# The page fills itself in from here.
+#
+# Monthly update (about 10 minutes):
+#   1. Open each platform's analytics (last 28 days).
+#   2. Update the numbers below. Round them: 4.2K, not 4,187.
+#   3. Change `updated` to today's date.
+#   4. Commit and push. The "Updated" stamp on the page follows.
+#
+# While `draft: true`, the page shows a banner and every TBD is a
+# placeholder. Delete the `draft` line when the real numbers are in.
+# Never put a made-up number here.
+#
+# To save a PDF: open /media-kit/, print, choose "Save as PDF".
+# ---------------------------------------------------------------
+
+draft: true
+updated: 2026-11-25
+
+# Third person, two or three sentences. This is the first thing a brand reads.
+name: Dan Bough
+tagline: A guy redesigning the next chapter of his life, out loud.
+bio: >-
+  Dan Bough spent more than twenty years in tech, from support and networks
+  to software and engineering leadership. Now he makes videos about starting
+  over, work, and figuring it out as he goes: honest, a little messy, and
+  funny when it fits. No masks.
+
+# One card per channel. Leave url blank until the link is confirmed (the
+# card then shows no link). Numbers are text, so "4.2K" and "TBD" both work.
+channels:
+  - platform: YouTube
+    handle: Dan Unfinished
+    icon: video
+    url: ""
+    note: Long-form videos, usually 10 to 30 minutes.
+    followers: TBD
+    avg_views: TBD
+    engagement: TBD
+
+  - platform: Instagram
+    handle: "@the.dan.b"
+    icon: camera
+    url: "https://www.instagram.com/the.dan.b/"
+    note: Short-form humor, mostly Reels.
+    followers: TBD
+    avg_views: TBD
+    engagement: TBD
+
+  - platform: TikTok
+    handle: TBD
+    icon: smartphone
+    url: ""
+    note: Short-form, newer channel.
+    followers: TBD
+    avg_views: TBD
+    engagement: TBD
+
+# From each platform's audience analytics. Brands care about this more
+# than follower counts.
+audience:
+  - label: Age range
+    value: TBD
+  - label: Gender split
+    value: TBD
+  - label: Top locations
+    value: TBD
+
+themes:
+  - Career change and job search
+  - Tech and AI
+  - Leadership and management
+  - Starting over
+  - Humor
+
+offers:
+  - title: Sponsored spot in a long-form video
+    icon: video
+    text: A mention or mid-roll in a YouTube video, in Dan's own words, clearly labeled as sponsored.
+  - title: Dedicated video
+    icon: camera
+    text: A full video built around your product or service, from honest first impressions to a real walkthrough.
+  - title: Short-form
+    icon: smartphone
+    text: A Reel or TikTok, made to fit the platform instead of copied from an ad.
+  - title: Videos for your channels
+    icon: megaphone
+    text: Content made for you to post yourself, often called UGC, with usage rights agreed up front.
+
+# Add real pieces only. Best performers, not newest. Leave the list empty
+# ([]) and the section stays out of the page (in draft it shows a reminder).
+# Fields: title, platform, url, note
+samples: []
+
+# Add a name only after the partner says it's fine to list them.
+# Leave empty ([]) and the section stays out of the page.
+partners: []
+
+fit_yes:
+  - Products and services we'd use ourselves
+  - Honest reviews, including what we didn't love
+  - Career, tech, productivity and creator tools
+  - Brands happy to let a real person say it their own way
+fit_no:
+  - Anything we haven't tried or wouldn't recommend
+  - Scripts to read word for word
+  - Hidden sponsorships. Paid content is always labeled
+  - Gambling, get-rich-quick offers and similar
+
+rates: Rates on request. They depend on the format, the usage rights, and how long the content stays up.
+
+process:
+  - title: Say hello
+    text: Email a short brief or just the idea. No formal pitch needed.
+  - title: Fit check
+    text: We try the product and tell you honestly whether it's a fit.
+  - title: Agree on the details
+    text: Format, usage rights, price and timing, in writing before any work starts.
+  - title: Outline and review
+    text: We share the key points for your approval. They're talking points, not a script.
+  - title: Make it, post it, report back
+    text: You see a draft first. After it goes live, we send the results.
+
+contact_subject: Partnership inquiry

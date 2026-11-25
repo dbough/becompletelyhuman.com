@@ -1,0 +1,113 @@
+---
+layout: default
+title: Content Creation
+description: >-
+  Videos and short-form content made by a real person, mistakes included.
+  Building an audience, and working with brands that want to reach it.
+permalink: /content-creation/
+noindex: true
+---
+<div class="pillar">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <p class="eyebrow">Content Creation</p>
+      <h1 id="hero-title" class="hero__title">Reach more people.</h1>
+      <p class="hero__lede">
+        We make videos and short-form content, and we're building an
+        audience while we do it. Brands that want to get in front of that
+        audience can work with us, and the people who follow along get
+        something honest.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="/media-kit/">See the media kit</a>
+        <a class="btn btn--outline" href="#make">What we make</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="make" aria-labelledby="make-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">What we make</p>
+        <h2 id="make-title">Made by a real person, mistakes included.</h2>
+      </header>
+
+      <ul class="card-grid" role="list">
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name="video" %}</span>
+          <h3 class="card__title">Long-form video</h3>
+          <p class="card__text">Thoughtful, blog-style videos on YouTube about starting over, work, tech, and figuring out the next chapter in public. It's the Dan Unfinished channel.</p>
+        </li>
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name="smartphone" %}</span>
+          <h3 class="card__title">Short-form</h3>
+          <p class="card__text">Humor and quick takes on Instagram Reels and TikTok. Shorter, funnier, and just as honest.</p>
+        </li>
+        <li class="card">
+          <span class="card__icon" aria-hidden="true">{% include icon.html name="megaphone" %}</span>
+          <h3 class="card__title">Content for brands</h3>
+          <p class="card__text">Sponsored spots on our channels, or videos made for you to post on your own. Real people on camera, not a stock ad.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--band" aria-labelledby="why-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">Why in public</p>
+        <h2 id="why-title">The messy middle works better on camera.</h2>
+      </header>
+      <div class="why__body story">
+        <p>
+          I'm redesigning the next stretch of my life out loud, and that's
+          the content. Not a polished highlight reel. The part in the middle,
+          where the idea isn't a result yet and I don't know how it ends.
+        </p>
+        <p>
+          People tend to stick around for that. It's easier to trust someone
+          who shows you the whole process, including the parts that didn't
+          work, and that trust is what a brand is really borrowing when it
+          works with us.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="themes-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">What it's about</p>
+        <h2 id="themes-title">Work, change, tech, and a few jokes.</h2>
+      </header>
+      <ul class="tags">
+        {%- for theme in site.data.mediakit.themes %}
+        <li>{{ theme }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--band" aria-labelledby="brands-title">
+    <div class="container">
+      <header class="section__header">
+        <p class="eyebrow">For brands</p>
+        <h2 id="brands-title">Want to reach this audience?</h2>
+        <p>The media kit has the channels, the audience, the formats, and how a project works. It's kept up to date, so it's the one link to send around.</p>
+      </header>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="/media-kit/">See the media kit</a>
+      </div>
+    </div>
+  </section>
+
+  {% include pillar-cta.html
+     eyebrow="Content Creation"
+     title="Let's make something."
+     text="Brand idea, collaboration, or just a question about how this works? Send a note. No formal pitch needed."
+     button_label="Ask about content creation"
+     button_href="/#contact"
+     email_subject="Content creation" %}
+
+</div>
