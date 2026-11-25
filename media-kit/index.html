@@ -45,7 +45,7 @@ noindex: true
         <h2 id="channels-title">Who's watching.</h2>
       </header>
 
-      <ul class="card-grid card-grid--two card-grid--top" role="list">
+      <ul class="card-grid card-grid--two" role="list">
         {%- for ch in kit.channels %}
         <li class="card card--channel">
           <span class="card__icon" aria-hidden="true">{% include icon.html name=ch.icon %}</span>
@@ -61,6 +61,7 @@ noindex: true
           <p class="card__text">{{ ch.context }}</p>
           {%- endif %}
           {%- if ch.topics.size > 0 %}
+          <p class="kit__label">{{ ch.topics_label | default: "Topics" }}</p>
           <ul class="tags tags--left" aria-label="Topics">
             {%- for t in ch.topics %}
             <li>{{ t }}</li>
@@ -72,9 +73,9 @@ noindex: true
             <h4>Audience</h4>
             <p class="panel__sub">{{ a.period }}</p>
             <dl class="kit__rows">
-              {%- for r in a.rows %}
+              {%- for r in a.rows %}{% unless r.extra %}
               <div><dt>{{ r.label }}</dt><dd>{{ r.value }}</dd></div>
-              {%- endfor %}
+              {%- endunless %}{% endfor %}
             </dl>
           </div>
           {%- endif %}{% endfor %}
@@ -84,6 +85,20 @@ noindex: true
         </li>
         {%- endfor %}
       </ul>
+
+      {%- for a in kit.audience %}
+      {%- assign extras = a.rows | where: "extra", true %}
+      {%- if extras.size > 0 %}
+      <div class="panel kit__extras">
+        <h3>More about {{ a.channel }} viewers</h3>
+        <dl class="kit__extras-grid">
+          {%- for r in extras %}
+          <div><dt>{{ r.label }}</dt><dd>{{ r.value }}</dd></div>
+          {%- endfor %}
+        </dl>
+      </div>
+      {%- endif %}
+      {%- endfor %}
     </div>
   </section>
 

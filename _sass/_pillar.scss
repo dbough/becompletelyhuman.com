@@ -681,11 +681,6 @@
   margin-top: auto;
 }
 
-// Channel cards keep their own height so neither one carries empty space.
-.pillar .card-grid--top {
-  align-items: flex-start;
-}
-
 .pillar .tags--left {
   justify-content: flex-start;
   margin: 0.25rem 0 0.5rem;
@@ -694,4 +689,53 @@
 .pillar .tags--left li {
   background: var(--bg);
   font-size: 0.85rem;
+}
+
+.pillar .kit__label {
+  margin: 0.25rem 0 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pillar .kit__label + .tags--left {
+  margin-top: 0;
+}
+
+// Wide strip under the channel cards for the extra YouTube audience facts.
+.pillar .kit__extras {
+  margin-top: 1.25rem;
+}
+
+.pillar .kit__extras h3 {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.pillar .kit__extras-grid {
+  display: grid;
+  gap: 1.25rem 2rem;
+  margin: 0;
+}
+
+@media (min-width: 760px) {
+  .pillar .kit__extras-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar .kit__extras-grid dt {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pillar .kit__extras-grid dd {
+  margin: 0.25rem 0 0;
+  color: var(--heading);
+  font-weight: 600;
 }

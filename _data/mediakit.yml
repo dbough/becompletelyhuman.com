@@ -69,10 +69,15 @@ channels:
     context: >-
       Most of the recent views come from two videos that took off (listed
       below). 19 videos so far.
+    topics_label: Topic categories, per YouTube
     topics:
-      - Career setbacks and rebuilding
-      - Tech and AI
-      - Engineering management
+      - Business
+      - Software
+      - Technology
+      - Engineering
+      - Lifestyle
+      - Computer Science
+      - Knowledge
 
   - platform: Instagram
     handle: "@the.dan.b"
@@ -93,6 +98,7 @@ channels:
     context: >-
       A small account that's growing fast, up from about 215 followers a
       month ago. 96% of views come from people who don't follow yet.
+    topics_label: Topics
     topics:
       - Middle age
       - ADHD
@@ -101,6 +107,8 @@ channels:
 
 # From each platform's audience analytics. Brands care about this more
 # than follower counts. Percentages are rounded to whole numbers.
+# Rows marked `extra: true` show in a wide strip under the channel cards
+# instead of inside them, which keeps the two cards about the same height.
 audience:
   - channel: YouTube
     period: Viewers, last 28 days
@@ -112,10 +120,13 @@ audience:
       - label: Top locations
         value: United States 47%, Canada 7%, United Kingdom 6%, India 4%
       - label: Household income
+        extra: true
         value: 63% in the top 10% of household incomes, per YouTube's estimates
       - label: Interests
+        extra: true
         value: Online banking, car buying, value shopping, business news, investing
       - label: Shopping for
+        extra: true
         value: Retirement planning, real estate
 
   - channel: Instagram
