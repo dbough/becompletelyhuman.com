@@ -19,8 +19,8 @@
   description: >-
     Life coaching for anyone looking to grow. We'll partner with you, be your
     biggest supporter and fan, and help you get where you want to go.
-  link:
-  link_label:
+  link: /coaching/
+  link_label: Learn more
 
 - name: Tech Consulting
   icon: laptop
